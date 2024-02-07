@@ -7,7 +7,7 @@ const JUMP_VELOCITY = -1000.0
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = 2000
 
-
+#this is a test for github
 func _physics_process(delta):
 	# Add the gravity.
 	if not is_on_floor():
