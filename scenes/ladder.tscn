@@ -1,9 +1,24 @@
-[gd_scene load_steps=2 format=3 uid="uid://cq0e36ygtrtxh"]
+[gd_scene load_steps=4 format=3 uid="uid://du7dcgq4y481a"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_yqswr"]
-height = 124.0
+[ext_resource type="Script" path="res://scripts/ladder.gd" id="1_b2v4l"]
+[ext_resource type="Texture2D" uid="uid://dtevdw1pq0v45" path="res://assets/Ladder_mossy2.png" id="2_8pchg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b5rqo"]
+size = Vector2(44.5556, 165.197)
 
 [node name="Ladder" type="Area2D"]
+scale = Vector2(3, 3.117)
+script = ExtResource("1_b2v4l")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CapsuleShape2D_yqswr")
+position = Vector2(15.6667, -34.4883)
+scale = Vector2(1, 1.039)
+shape = SubResource("RectangleShape2D_b5rqo")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(14, -35.2903)
+scale = Vector2(2, 2.078)
+texture = ExtResource("2_8pchg")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

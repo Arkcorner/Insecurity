@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://bgwkv326jypjy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pf7m0"]
+size = Vector2(246, 20)
+
+[sub_resource type="QuadMesh" id="QuadMesh_ldtl3"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_4thhh"]
+
+[node name="World_Border" type="StaticBody2D"]
+position = Vector2(276, 626)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(156, 26)
+scale = Vector2(1000, 1)
+shape = SubResource("RectangleShape2D_pf7m0")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+modulate = Color(0.137255, 0.0235294, 0.270588, 1)
+position = Vector2(156, 26)
+scale = Vector2(100000, 20)
+mesh = SubResource("QuadMesh_ldtl3")
+texture = SubResource("CanvasTexture_4thhh")
