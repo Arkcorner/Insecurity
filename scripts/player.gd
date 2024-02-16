@@ -1,7 +1,8 @@
 extends CharacterBody2D
 
 var _scale = Vector2(1, 2)
-var SPEED = 800.0
+var SPEED = 800
+var x = SPEED #value to reset speed back to after sprinting
 
 
 # dash values
@@ -11,11 +12,11 @@ var can_dash = true
 var dash_count = 2
 
 #values for double jump
-const JUMP_VELOCITY = 1000.0
+const JUMP_VELOCITY = 1300.0
 var jump_count = 2
 var can_jump = true
 
-# Get the gravity from the project settings to be synced with RigidBody nodes.
+# Set the Gravity
 var gravity = 2000
 
 #this is a test for github
@@ -33,10 +34,15 @@ func _physics_process(delta):
 	else:
 		can_jump = true	# Add the gravity.
 	if not is_on_floor():
-		velocity.y += gravity * delta
+		if Global.is_climbing == false:
+			velocity.y += gravity * delta
 		# monitor dash count and stop dashes
 	if Global.is_climbing == true:
-		if Input.is_action_pressed("climb"):
+		if Input.is_action_pressed("sprint"):
+			velocity.y = 0
+		if Input.is_action_pressed("climb_down"):
+			velocity.y = 500
+		if Input.is_action_pressed("climb_up"):
 			velocity.y = -500
 	# Handle Jump.
 	if Input.is_action_just_pressed("jump") and can_jump:
@@ -59,7 +65,7 @@ func _physics_process(delta):
 	if Input.is_action_pressed("sprint"):
 		SPEED = 1200
 	if Input.is_action_just_released("sprint"):
-		SPEED = 800
+		SPEED = x
 	# Get the input direction and handle the movement/deceleration.
 	var direction = Input.get_axis("left", "right")
 	if direction:

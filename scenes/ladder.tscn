@@ -4,14 +4,14 @@
 [ext_resource type="Texture2D" uid="uid://dtevdw1pq0v45" path="res://assets/Ladder_mossy2.png" id="2_8pchg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b5rqo"]
-size = Vector2(44.5556, 165.197)
+size = Vector2(44.5556, 164.579)
 
 [node name="Ladder" type="Area2D"]
 scale = Vector2(3, 3.117)
 script = ExtResource("1_b2v4l")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(15.6667, -34.4883)
+position = Vector2(15.6667, -34.1674)
 scale = Vector2(1, 1.039)
 shape = SubResource("RectangleShape2D_b5rqo")
 

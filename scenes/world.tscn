@@ -1,18 +1,31 @@
-[gd_scene load_steps=5 format=3 uid="uid://1hrd4mrev6cs"]
+[gd_scene load_steps=7 format=3 uid="uid://1hrd4mrev6cs"]
 
 [ext_resource type="PackedScene" uid="uid://hfohceos6n65" path="res://scenes/player.tscn" id="1_0nxx7"]
+[ext_resource type="PackedScene" uid="uid://yskydjpi58lf" path="res://scenes/dog_companion.tscn" id="1_cndxm"]
 [ext_resource type="PackedScene" uid="uid://du7dcgq4y481a" path="res://scenes/ladder.tscn" id="2_6t3fa"]
 [ext_resource type="PackedScene" uid="uid://bgwkv326jypjy" path="res://scenes/World_border.tscn" id="3_71wbd"]
 [ext_resource type="PackedScene" uid="uid://cgsv3lwnmxlbi" path="res://scenes/platform.tscn" id="4_vwmym"]
 
+[sub_resource type="QuadMesh" id="QuadMesh_xbqku"]
+
 [node name="World" type="Node2D"]
 position = Vector2(845, -305)
 
+[node name="dog_companion" parent="." instance=ExtResource("1_cndxm")]
+position = Vector2(3473, -1072)
+
+[node name="Platform11" parent="." instance=ExtResource("4_vwmym")]
+position = Vector2(-3655, -1026)
+rotation = -1.5708
+
 [node name="Player" parent="." instance=ExtResource("1_0nxx7")]
-position = Vector2(-2485, 111)
+top_level = true
+position = Vector2(-1844, -324)
 
 [node name="Ladder" parent="." instance=ExtResource("2_6t3fa")]
-position = Vector2(1374, -524)
+light_mask = 2
+visibility_layer = 2
+position = Vector2(1383, -511)
 
 [node name="World_Border" parent="." instance=ExtResource("3_71wbd")]
 position = Vector2(1842, 429)
@@ -43,4 +56,60 @@ position = Vector2(2463, -1539)
 rotation = -1.5708
 
 [node name="Platform9" parent="." instance=ExtResource("4_vwmym")]
-position = Vector2(3965, -961)
+position = Vector2(3969, -960)
+
+[node name="Platform10" parent="." instance=ExtResource("4_vwmym")]
+position = Vector2(-3654, -44)
+rotation = -1.5708
+
+[node name="Platform12" parent="." instance=ExtResource("4_vwmym")]
+position = Vector2(5004, -968.875)
+
+[node name="Platform13" parent="." instance=ExtResource("4_vwmym")]
+position = Vector2(6040, -840.875)
+
+[node name="Platform14" parent="." instance=ExtResource("4_vwmym")]
+position = Vector2(7076, -690.875)
+
+[node name="Platform15" parent="." instance=ExtResource("4_vwmym")]
+modulate = Color(1, 0, 1, 1)
+position = Vector2(8109, -561.875)
+
+[node name="Platform16" parent="." instance=ExtResource("4_vwmym")]
+modulate = Color(0, 1, 1, 1)
+position = Vector2(9116, -690.875)
+
+[node name="Platform17" parent="." instance=ExtResource("4_vwmym")]
+modulate = Color(0.188235, 0.372549, 1, 1)
+position = Vector2(10120, -818.875)
+
+[node name="Platform18" parent="." instance=ExtResource("4_vwmym")]
+position = Vector2(11091, -957.875)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 5592.0
+offset_top = -1124.0
+offset_right = 5790.0
+offset_bottom = -1070.0
+theme_override_font_sizes/font_size = 28
+text = "Current Bridge Design"
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+position = Vector2(5690, -938)
+scale = Vector2(216.249, 216.25)
+mesh = SubResource("QuadMesh_xbqku")
+
+[node name="Label2" type="Label" parent="."]
+offset_left = -3482.0
+offset_top = -28.0
+offset_right = -2610.0
+offset_bottom = 266.0
+theme_override_font_sizes/font_size = 28
+text = "Controls:
+Movement: A & D
+Climb: W & S stop on the ladder with Shift
+Jump: Space
+Sprint: Shift
+Dash: C
+Crouch: Ctrl
+"
