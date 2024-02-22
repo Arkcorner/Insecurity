@@ -1,0 +1,34 @@
+[gd_scene load_steps=2 format=3 uid="uid://ecbq0jn5cpw3"]
+
+[ext_resource type="Script" path="res://scripts/dog_naming.gd" id="1_vr3xc"]
+
+[node name="dog_naming" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Give the Dog a Name! 
+"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="LineEdit" type="LineEdit" parent="VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(180, 0)
+layout_mode = 2
+placeholder_text = "Dexter"
+script = ExtResource("1_vr3xc")
+
+[connection signal="gui_input" from="VBoxContainer/HBoxContainer/LineEdit" to="VBoxContainer/HBoxContainer/LineEdit" method="_on_gui_input"]
+[connection signal="hidden" from="VBoxContainer/HBoxContainer/LineEdit" to="VBoxContainer/HBoxContainer/LineEdit" method="_on_hidden"]
+[connection signal="text_submitted" from="VBoxContainer/HBoxContainer/LineEdit" to="VBoxContainer/HBoxContainer/LineEdit" method="_on_text_submitted"]
