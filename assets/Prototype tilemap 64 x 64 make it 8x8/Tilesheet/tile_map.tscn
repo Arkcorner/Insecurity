@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cgwlc1y4x8w1p"]
+
+[ext_resource type="TileSet" uid="uid://cqujx056cyh3r" path="res://assets/Prototype tilemap 64 x 64 make it 8x8/Tilesheet/new_tile_set.tres" id="1_tmxmd"]
+
+[node name="TileMap" type="TileMap"]
+tile_set = ExtResource("1_tmxmd")
+format = 2
+layer_0/tile_data = PackedInt32Array(-65536, 458752, 7, -65535, 524288, 7, -65534, 458752, 7, -65533, 524288, 7, -65532, 458752, 7, -65531, 524288, 7)
