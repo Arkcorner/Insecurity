@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://w5dqwyahgweh"
-path="res://.godot/imported/IconTemp.jpg-49e74b48908699cd412f0f8f1088bd13.ctex"
+uid="uid://cod0e8mkk2lxu"
+path="res://.godot/imported/SaveCheckpointCamp.png-80833d703ad319651f963bc1bd6e0f39.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/IconTemp.jpg"
-dest_files=["res://.godot/imported/IconTemp.jpg-49e74b48908699cd412f0f8f1088bd13.ctex"]
+source_file="res://assets/SaveCheckpointCamp.png"
+dest_files=["res://.godot/imported/SaveCheckpointCamp.png-80833d703ad319651f963bc1bd6e0f39.ctex"]
 
 [params]
 

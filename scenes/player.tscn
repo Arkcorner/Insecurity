@@ -1,24 +1,22 @@
 [gd_scene load_steps=4 format=3 uid="uid://hfohceos6n65"]
 
-[ext_resource type="Texture2D" uid="uid://bq4b4io0ehsr1" path="res://icon.svg" id="1_l6w42"]
 [ext_resource type="Script" path="res://scripts/Player.gd" id="1_wowva"]
+[ext_resource type="Texture2D" uid="uid://dco7lxmgy3055" path="res://assets/Celste-export.png" id="2_7kpp4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5p6pq"]
-size = Vector2(43, 44.25)
+size = Vector2(11, 16)
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_wowva")
 
 [node name="Player_sprite" type="Sprite2D" parent="."]
-position = Vector2(-13.5, -25.5)
-scale = Vector2(0.34, 0.35)
-texture = ExtResource("1_l6w42")
+texture_filter = 1
+texture = ExtResource("2_7kpp4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-13.5, -25.875)
+texture_filter = 1
+position = Vector2(-0.5, 2.38419e-07)
 shape = SubResource("RectangleShape2D_5p6pq")
-
-[node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="dash_timer" type="Timer" parent="."]
 wait_time = 0.2
