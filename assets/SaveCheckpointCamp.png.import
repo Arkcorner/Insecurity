@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cwmg5bgk0h04f"
-path="res://.godot/imported/TilesetIce005.png-f52ef481b920120f12e38f5d02e0c367.ctex"
+uid="uid://cod0e8mkk2lxu"
+path="res://.godot/imported/SaveCheckpointCamp.png-80833d703ad319651f963bc1bd6e0f39.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Tiles/TilesetIce005.png"
-dest_files=["res://.godot/imported/TilesetIce005.png-f52ef481b920120f12e38f5d02e0c367.ctex"]
+source_file="res://assets/SaveCheckpointCamp.png"
+dest_files=["res://.godot/imported/SaveCheckpointCamp.png-80833d703ad319651f963bc1bd6e0f39.ctex"]
 
 [params]
 

@@ -1,21 +1,21 @@
 extends CharacterBody2D
 
 var _scale = Vector2(1, 2)
-var SPEED = 800
+var SPEED = 75
 var x = SPEED #value to reset speed back to after sprinting
 # dash values
-const DASH_SPEED = 2000
+const DASH_SPEED = 50
 var dashing = false
 var can_dash = true
 var dash_count = 2
 
 #values for double jump
-const JUMP_VELOCITY = 1300.0
+const JUMP_VELOCITY = 200.0
 var jump_count = 2
 var can_jump = true
 
 # Set the Gravity
-var gravity = 2000
+var gravity = 450
 
 #this is a test for github
 func _physics_process(delta):
@@ -42,9 +42,9 @@ func _physics_process(delta):
 			if Input.is_action_pressed("sprint"):
 				velocity.y = 0
 			if Input.is_action_pressed("climb_down"):
-				velocity.y = 500
+				velocity.y = 250
 			if Input.is_action_pressed("climb_up"):
-				velocity.y = -500
+				velocity.y = -250
 		# Handle Jump.
 		if Input.is_action_just_pressed("jump") and can_jump:
 			velocity.y = JUMP_VELOCITY * (-1)

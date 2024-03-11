@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cj2domtb3mdmb"
-path="res://.godot/imported/Dog.png-8091754782f06b07f325615125330980.ctex"
+uid="uid://cg1il88ftsniq"
+path="res://.godot/imported/TilesetIce006.png-c075ebf8ad83058f3d71134192c6032e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Dog.png"
-dest_files=["res://.godot/imported/Dog.png-8091754782f06b07f325615125330980.ctex"]
+source_file="res://assets/Tiles/TilesetIce006.png"
+dest_files=["res://.godot/imported/TilesetIce006.png-c075ebf8ad83058f3d71134192c6032e.ctex"]
 
 [params]
 

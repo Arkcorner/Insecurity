@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://w5dqwyahgweh"
-path="res://.godot/imported/IconTemp.jpg-49e74b48908699cd412f0f8f1088bd13.ctex"
+uid="uid://dco7lxmgy3055"
+path="res://.godot/imported/Celste-export.png-b480e7be252bb7ab615b5fe8a5f7931c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/IconTemp.jpg"
-dest_files=["res://.godot/imported/IconTemp.jpg-49e74b48908699cd412f0f8f1088bd13.ctex"]
+source_file="res://assets/Celste-export.png"
+dest_files=["res://.godot/imported/Celste-export.png-b480e7be252bb7ab615b5fe8a5f7931c.ctex"]
 
 [params]
 
