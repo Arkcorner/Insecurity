@@ -98,8 +98,10 @@ func death_tween():
 	tween.tween_property(self, "scale", Vector2.ZERO, 0.15)
 	await tween.finished
 	global_position = spawn_point.global_position
+	Global.time_running = false
 	await get_tree().create_timer(0.3).timeout
 	respawn_tween()
+	Global.time_running = true
 
 func respawn_tween():
 	var tween = create_tween()
