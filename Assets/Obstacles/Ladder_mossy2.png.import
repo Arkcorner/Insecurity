@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://doyyqldssk4tk"
-path="res://.godot/imported/TilemapPreset001.png-5ad76d2cd455780ff288544db10c963d.ctex"
+uid="uid://dtevdw1pq0v45"
+path="res://.godot/imported/Ladder_mossy2.png-2d19e7307914a718c24ae1d03ff5f653.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Tiles/TilemapPreset001.png"
-dest_files=["res://.godot/imported/TilemapPreset001.png-5ad76d2cd455780ff288544db10c963d.ctex"]
+source_file="res://Assets/Obstacles/Ladder_mossy2.png"
+dest_files=["res://.godot/imported/Ladder_mossy2.png-2d19e7307914a718c24ae1d03ff5f653.ctex"]
 
 [params]
 

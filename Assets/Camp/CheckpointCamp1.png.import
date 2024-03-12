@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dco7lxmgy3055"
-path="res://.godot/imported/Celste-export.png-b480e7be252bb7ab615b5fe8a5f7931c.ctex"
+uid="uid://dxaxvi4cbbo8y"
+path="res://.godot/imported/CheckpointCamp1.png-c7f0319cd506bbdf04efd7f09d308937.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Celste-export.png"
-dest_files=["res://.godot/imported/Celste-export.png-b480e7be252bb7ab615b5fe8a5f7931c.ctex"]
+source_file="res://Assets/Camp/CheckpointCamp1.png"
+dest_files=["res://.godot/imported/CheckpointCamp1.png-c7f0319cd506bbdf04efd7f09d308937.ctex"]
 
 [params]
 

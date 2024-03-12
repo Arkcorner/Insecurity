@@ -1,0 +1,57 @@
+[gd_scene load_steps=10 format=3 uid="uid://mv7ukw8epbtr"]
+
+[ext_resource type="Texture2D" uid="uid://cusmlq6gxfu5a" path="res://Assets/Camp/CheckpointCampIdle.png" id="2_fbmwk"]
+[ext_resource type="Texture2D" uid="uid://dxaxvi4cbbo8y" path="res://Assets/Camp/CheckpointCamp1.png" id="2_twbak"]
+[ext_resource type="Texture2D" uid="uid://ccb87qerd1piq" path="res://Assets/Camp/CheckpointCamp2.png" id="3_0h28f"]
+[ext_resource type="Texture2D" uid="uid://jbsbcnt3ckfh" path="res://Assets/Camp/CheckpointCamp3.png" id="4_ktj6v"]
+[ext_resource type="Texture2D" uid="uid://fdnpovexi7hb" path="res://Assets/Camp/CheckpointCamp4.png" id="5_op2rv"]
+
+[sub_resource type="GDScript" id="GDScript_raukm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ki1g8"]
+size = Vector2(456.158, 460.371)
+
+[sub_resource type="Animation" id="Animation_j4sd8"]
+resource_name = "Activated"
+length = 0.7
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("2_twbak"), ExtResource("3_0h28f"), ExtResource("4_ktj6v"), ExtResource("5_op2rv")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wv1bf"]
+_data = {
+"Activated": SubResource("Animation_j4sd8")
+}
+
+[node name="Checkpoint" type="Node2D"]
+script = SubResource("GDScript_raukm")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("2_fbmwk")
+
+[node name="Collision" type="Area2D" parent="."]
+scale = Vector2(0.106668, 0.106668)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collision"]
+position = Vector2(0, 1.64511)
+scale = Vector2(0.780973, 0.780973)
+shape = SubResource("RectangleShape2D_ki1g8")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_wv1bf")
+}
+
+[node name="SawnPoint" type="Marker2D" parent="."]
+unique_name_in_owner = true

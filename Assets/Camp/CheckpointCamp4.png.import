@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://coflrb8afx8k8"
-path="res://.godot/imported/ladder_mossy.png-c91540a2a55b773f9e048eb8ea4ac2d3.ctex"
+uid="uid://fdnpovexi7hb"
+path="res://.godot/imported/CheckpointCamp4.png-e6c89f0d36a79cc7a199344579e0b690.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ladder_mossy.png"
-dest_files=["res://.godot/imported/ladder_mossy.png-c91540a2a55b773f9e048eb8ea4ac2d3.ctex"]
+source_file="res://Assets/Camp/CheckpointCamp4.png"
+dest_files=["res://.godot/imported/CheckpointCamp4.png-e6c89f0d36a79cc7a199344579e0b690.ctex"]
 
 [params]
 
