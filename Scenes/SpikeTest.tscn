@@ -1594,3 +1594,4 @@ layer_0/tile_data = PackedInt32Array(65534, 1, 22, 65535, 65537, 22, 0, 65537, 2
 
 [node name="SpawnPoint" type="Marker2D" parent="Level"]
 unique_name_in_owner = true
+position = Vector2(-806, 242)

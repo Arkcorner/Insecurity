@@ -86,6 +86,8 @@ func _on_dash_timer_timeout() -> void:
 	#pass # Replace with function body.
 
 #Aydans Atempt
+@export_category("Toggle Functions") 
+@export_category("Player Properties") # You can tweak these changes according to your likings
 @onready var player_sprite = $AnimatedSprite2D
 @onready var spawn_point = %SpawnPoint
 
