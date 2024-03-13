@@ -1,10 +1,11 @@
-[gd_scene load_steps=13 format=3 uid="uid://bhme3nsd0wog5"]
+[gd_scene load_steps=14 format=3 uid="uid://bhme3nsd0wog5"]
 
 [ext_resource type="PackedScene" uid="uid://hfohceos6n65" path="res://Scenes/player.tscn" id="1_xl3ji"]
 [ext_resource type="Texture2D" uid="uid://oo5l7hwulcj4" path="res://Assets/Tiles/Spikes.png" id="2_ac5qj"]
 [ext_resource type="Texture2D" uid="uid://doyyqldssk4tk" path="res://Assets/Tiles/TilemapPreset001.png" id="3_nhvst"]
 [ext_resource type="Texture2D" uid="uid://cg1il88ftsniq" path="res://Assets/Tiles/TilesetIce006.png" id="4_fg2sx"]
 [ext_resource type="Texture2D" uid="uid://cvomhqq0v1xgm" path="res://Assets/Tiles/TilemapObjects.png" id="5_xroyx"]
+[ext_resource type="Texture2D" uid="uid://cusmlq6gxfu5a" path="res://Assets/Camp/CheckpointCampIdle.png" id="7_b6vnn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fl6md"]
 texture = ExtResource("2_ac5qj")
@@ -1516,3 +1517,8 @@ layer_0/tile_data = PackedInt32Array(65534, 1, 22, 65535, 65537, 22, 0, 65537, 2
 [node name="SpawnPoint" type="Marker2D" parent="Level"]
 unique_name_in_owner = true
 position = Vector2(-806, 242)
+
+[node name="Sprite2D" type="Sprite2D" parent="Level/SpawnPoint"]
+texture_filter = 1
+position = Vector2(2, -9)
+texture = ExtResource("7_b6vnn")
