@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://coflrb8afx8k8"
-path="res://.godot/imported/ladder_mossy.png-c91540a2a55b773f9e048eb8ea4ac2d3.ctex"
+uid="uid://bbq64dte6ohd8"
+path="res://.godot/imported/Car_dooropen.png-1e6de7c4591e149b8a9852aab71533fa.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ladder_mossy.png"
-dest_files=["res://.godot/imported/ladder_mossy.png-c91540a2a55b773f9e048eb8ea4ac2d3.ctex"]
+source_file="res://Assets/Characters/Car_dooropen.png"
+dest_files=["res://.godot/imported/Car_dooropen.png-1e6de7c4591e149b8a9852aab71533fa.ctex"]
 
 [params]
 

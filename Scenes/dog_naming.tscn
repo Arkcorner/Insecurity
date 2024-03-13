@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://ecbq0jn5cpw3"]
 
-[ext_resource type="Script" path="res://scripts/dog_naming.gd" id="1_vr3xc"]
+[ext_resource type="Script" path="res://Scripts/dog_naming.gd" id="1_vr3xc"]
 
 [node name="dog_naming" type="Control"]
 layout_mode = 3

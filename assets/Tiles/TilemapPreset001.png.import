@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://w5dqwyahgweh"
-path="res://.godot/imported/IconTemp.jpg-49e74b48908699cd412f0f8f1088bd13.ctex"
+uid="uid://doyyqldssk4tk"
+path="res://.godot/imported/TilemapPreset001.png-5ad76d2cd455780ff288544db10c963d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/IconTemp.jpg"
-dest_files=["res://.godot/imported/IconTemp.jpg-49e74b48908699cd412f0f8f1088bd13.ctex"]
+source_file="res://Assets/Tiles/TilemapPreset001.png"
+dest_files=["res://.godot/imported/TilemapPreset001.png-5ad76d2cd455780ff288544db10c963d.ctex"]
 
 [params]
 

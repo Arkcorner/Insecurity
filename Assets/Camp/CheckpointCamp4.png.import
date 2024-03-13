@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cip0ocitxbyn8"
-path="res://.godot/imported/PixelDog.png-e77a6f7be9b09031805d3ccb40243978.ctex"
+uid="uid://fdnpovexi7hb"
+path="res://.godot/imported/CheckpointCamp4.png-e6c89f0d36a79cc7a199344579e0b690.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/PixelDog.png"
-dest_files=["res://.godot/imported/PixelDog.png-e77a6f7be9b09031805d3ccb40243978.ctex"]
+source_file="res://Assets/Camp/CheckpointCamp4.png"
+dest_files=["res://.godot/imported/CheckpointCamp4.png-e6c89f0d36a79cc7a199344579e0b690.ctex"]
 
 [params]
 

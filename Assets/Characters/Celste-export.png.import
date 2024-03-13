@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://w5hn6hxkumgi"
-path="res://.godot/imported/dogPixel.png-54da122940c489ce8149b441016451a1.ctex"
+uid="uid://dco7lxmgy3055"
+path="res://.godot/imported/Celste-export.png-ac0cad0be368ac115136c7d910094b3e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/dogPixel.png"
-dest_files=["res://.godot/imported/dogPixel.png-54da122940c489ce8149b441016451a1.ctex"]
+source_file="res://Assets/Characters/Celste-export.png"
+dest_files=["res://.godot/imported/Celste-export.png-ac0cad0be368ac115136c7d910094b3e.ctex"]
 
 [params]
 

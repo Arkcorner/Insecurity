@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cj2domtb3mdmb"
-path="res://.godot/imported/Dog.png-8091754782f06b07f325615125330980.ctex"
+uid="uid://bvm7atmc01krp"
+path="res://.godot/imported/Rope.png-4df25dc71f80a71346184d6ced005e45.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Dog.png"
-dest_files=["res://.godot/imported/Dog.png-8091754782f06b07f325615125330980.ctex"]
+source_file="res://Assets/Rope/Rope.png"
+dest_files=["res://.godot/imported/Rope.png-4df25dc71f80a71346184d6ced005e45.ctex"]
 
 [params]
 

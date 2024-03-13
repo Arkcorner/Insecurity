@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dtevdw1pq0v45"
-path="res://.godot/imported/Ladder_mossy2.png-e878c218f433842ca43758283dc6609f.ctex"
+uid="uid://bvfn0q1tsfexh"
+path="res://.godot/imported/Husky.png-6242772d1af6ec5320b41aafecfa81c6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Ladder_mossy2.png"
-dest_files=["res://.godot/imported/Ladder_mossy2.png-e878c218f433842ca43758283dc6609f.ctex"]
+source_file="res://Assets/Characters/Husky.png"
+dest_files=["res://.godot/imported/Husky.png-6242772d1af6ec5320b41aafecfa81c6.ctex"]
 
 [params]
 
