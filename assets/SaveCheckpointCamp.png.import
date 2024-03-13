@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bvfn0q1tsfexh"
-path="res://.godot/imported/Husky.png-6242772d1af6ec5320b41aafecfa81c6.ctex"
+uid="uid://cod0e8mkk2lxu"
+path="res://.godot/imported/SaveCheckpointCamp.png-80833d703ad319651f963bc1bd6e0f39.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Characters/Husky.png"
-dest_files=["res://.godot/imported/Husky.png-6242772d1af6ec5320b41aafecfa81c6.ctex"]
+source_file="res://assets/SaveCheckpointCamp.png"
+dest_files=["res://.godot/imported/SaveCheckpointCamp.png-80833d703ad319651f963bc1bd6e0f39.ctex"]
 
 [params]
 

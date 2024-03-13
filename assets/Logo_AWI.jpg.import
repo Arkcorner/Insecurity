@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://hopdceoic8vf"
-path="res://.godot/imported/Logo_AWI.jpg-4ccf3845d357ade06ad237de6e20d812.ctex"
+path="res://.godot/imported/Logo_AWI.jpg-083414bfb15c45d1be356e1922f833d0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Logo_AWI.jpg"
-dest_files=["res://.godot/imported/Logo_AWI.jpg-4ccf3845d357ade06ad237de6e20d812.ctex"]
+source_file="res://assets/Logo_AWI.jpg"
+dest_files=["res://.godot/imported/Logo_AWI.jpg-083414bfb15c45d1be356e1922f833d0.ctex"]
 
 [params]
 

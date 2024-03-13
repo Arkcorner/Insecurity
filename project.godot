@@ -13,11 +13,10 @@ config_version=5
 config/name="Insecurity"
 run/main_scene="res://UI/main_menu.tscn"
 config/features=PackedStringArray("4.1", "GL Compatibility")
-config/icon="res://Assets/Logo_AWI.jpg"
 
 [autoload]
 
-Global="*res://Scripts/Global.gd"
+Global="*res://scripts/Global.gd"
 
 [display]
 
