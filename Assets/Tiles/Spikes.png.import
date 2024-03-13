@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://doyyqldssk4tk"
-path="res://.godot/imported/TilemapPreset001.png-5ad76d2cd455780ff288544db10c963d.ctex"
+uid="uid://oo5l7hwulcj4"
+path="res://.godot/imported/Spikes.png-2c72b6ca04d683cd2e10ee0d977dabbf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Tiles/TilemapPreset001.png"
-dest_files=["res://.godot/imported/TilemapPreset001.png-5ad76d2cd455780ff288544db10c963d.ctex"]
+source_file="res://Assets/Tiles/Spikes.png"
+dest_files=["res://.godot/imported/Spikes.png-2c72b6ca04d683cd2e10ee0d977dabbf.ctex"]
 
 [params]
 

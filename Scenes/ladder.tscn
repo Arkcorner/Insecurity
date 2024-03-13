@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://du7dcgq4y481a"]
 
-[ext_resource type="Script" path="res://scripts/ladder.gd" id="1_b2v4l"]
-[ext_resource type="Texture2D" uid="uid://dtevdw1pq0v45" path="res://assets/Ladder_mossy2.png" id="2_8pchg"]
+[ext_resource type="Script" path="res://Scripts/ladder.gd" id="1_b2v4l"]
+[ext_resource type="Texture2D" uid="uid://dtevdw1pq0v45" path="res://Assets/Obstacles/Ladder_mossy2.png" id="2_8pchg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b5rqo"]
 size = Vector2(44.5556, 164.579)

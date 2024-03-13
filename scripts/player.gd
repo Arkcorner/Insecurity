@@ -7,15 +7,14 @@ var x = SPEED #value to reset speed back to after sprinting
 const DASH_SPEED = 50
 var dashing = false
 var can_dash = true
-var dash_count = 2
-
-#values for double jump
+var dash_count = 2 #values for double jump
 const JUMP_VELOCITY = 200.0
 var jump_count = 2
 var can_jump = true
 
 # Set the Gravity
 var gravity = 450
+
 
 #this is a test for github
 func _physics_process(delta):
@@ -81,3 +80,41 @@ func _physics_process(delta):
 #make it stop
 func _on_dash_timer_timeout() -> void:
 	dashing = false
+
+
+#func _on_area_2d_body_entered(body):
+	#pass # Replace with function body.
+
+#Aydans Atempt
+@export_category("Toggle Functions") 
+@export_category("Player Properties") # You can tweak these changes according to your likings
+@onready var spawn_point = %SpawnPoint
+
+
+# Tween Animations
+func death_tween():
+	var tween = create_tween()
+	tween.tween_property(self, "scale", Vector2.ZERO, 0.15)
+	await tween.finished
+	global_position = spawn_point.global_position
+	Global.time_running = false
+	await get_tree().create_timer(0.3).timeout
+	respawn_tween()
+	Global.time_running = true
+
+func respawn_tween():
+	var tween = create_tween()
+	tween.stop(); tween.play()
+	tween.tween_property(self, "scale", Vector2.ONE, 0.15) 
+
+func jump_tween():
+	var tween = create_tween()
+	tween.tween_property(self, "scale", Vector2(0.7, 1.4), 0.1)
+	tween.tween_property(self, "scale", Vector2.ONE, 0.1)
+
+# --------- SIGNALS ---------- #
+
+# Reset the player's position to the current level spawn point if collided with any trap
+func _on_collision_body_entered(_body):
+	if _body.is_in_group("Traps"):
+		death_tween()

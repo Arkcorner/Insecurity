@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://doyyqldssk4tk"
-path="res://.godot/imported/TilemapPreset001.png-5ad76d2cd455780ff288544db10c963d.ctex"
+uid="uid://b67hlcptox3hn"
+path="res://.godot/imported/Forest_BG.png-52347abfbb5e19731591082b685200d7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Tiles/TilemapPreset001.png"
-dest_files=["res://.godot/imported/TilemapPreset001.png-5ad76d2cd455780ff288544db10c963d.ctex"]
+source_file="res://Assets/Backgrounds/Forest_BG.png"
+dest_files=["res://.godot/imported/Forest_BG.png-52347abfbb5e19731591082b685200d7.ctex"]
 
 [params]
 

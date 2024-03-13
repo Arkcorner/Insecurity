@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://doyyqldssk4tk"
-path="res://.godot/imported/TilemapPreset001.png-5ad76d2cd455780ff288544db10c963d.ctex"
+uid="uid://cbkr0s7brx05s"
+path="res://.godot/imported/Car_doorshut.png-301a18109c41d3a2d8a9cd4704f048f4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Tiles/TilemapPreset001.png"
-dest_files=["res://.godot/imported/TilemapPreset001.png-5ad76d2cd455780ff288544db10c963d.ctex"]
+source_file="res://Assets/Characters/Car_doorshut.png"
+dest_files=["res://.godot/imported/Car_doorshut.png-301a18109c41d3a2d8a9cd4704f048f4.ctex"]
 
 [params]
 
