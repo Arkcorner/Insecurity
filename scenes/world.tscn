@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://1hrd4mrev6cs"]
+[gd_scene load_steps=10 format=3 uid="uid://1hrd4mrev6cs"]
 
 [ext_resource type="PackedScene" uid="uid://hfohceos6n65" path="res://scenes/player.tscn" id="1_0nxx7"]
 [ext_resource type="PackedScene" uid="uid://yskydjpi58lf" path="res://scenes/dog_companion.tscn" id="1_cndxm"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://cgsv3lwnmxlbi" path="res://scenes/platform.tscn" id="4_vwmym"]
 [ext_resource type="PackedScene" uid="uid://ecbq0jn5cpw3" path="res://scenes/dog_naming.tscn" id="6_f7kl3"]
 [ext_resource type="PackedScene" uid="uid://dk0b20a4ol8tb" path="res://scenes/plank_pickup.tscn" id="7_s272a"]
+[ext_resource type="PackedScene" uid="uid://dq6cop6wpvn3p" path="res://scenes/strawberry.tscn" id="8_gc6dl"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_xbqku"]
 
@@ -125,3 +126,28 @@ offset_bottom = -1231.0
 
 [node name="PlankPickup" parent="." instance=ExtResource("7_s272a")]
 position = Vector2(-3407, 351)
+
+[node name="StrawberryTesting" type="Node2D" parent="."]
+
+[node name="Platform19" parent="StrawberryTesting" instance=ExtResource("4_vwmym")]
+position = Vector2(-2558, -730)
+
+[node name="Platform20" parent="StrawberryTesting" instance=ExtResource("4_vwmym")]
+position = Vector2(-3089, -1067)
+rotation = -1.57079
+
+[node name="Platform22" parent="StrawberryTesting" instance=ExtResource("4_vwmym")]
+position = Vector2(-2532, -1421)
+rotation = -3.14159
+
+[node name="Strawberry" parent="StrawberryTesting" instance=ExtResource("8_gc6dl")]
+position = Vector2(-2859, -1402)
+
+[node name="Strawberry_Clear" parent="StrawberryTesting/Strawberry" index="1"]
+position = Vector2(658, 625)
+
+[node name="Platform21" parent="StrawberryTesting" instance=ExtResource("4_vwmym")]
+position = Vector2(-2207, -1355)
+rotation = -1.57079
+
+[editable path="StrawberryTesting/Strawberry"]

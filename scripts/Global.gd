@@ -8,3 +8,4 @@ var time_running = true
 var is_climbing = false
 var dog_name = "Dexter"
 var plank_count = 0 
+var strawberry_count = 0
