@@ -1,83 +1,97 @@
 extends CharacterBody2D
 
 var _scale = Vector2(1, 2)
-var SPEED = 75
-var x = SPEED #value to reset speed back to after sprinting
+var Speed = 75
+
 # dash values
-const DASH_SPEED = 50
-var dashing = false
-var can_dash = true
-var dash_count = 2
+const Dash_speed = 150
+var Dashing = false
+var Can_dash = true
+var Dash_count = 2
 
 #values for double jump
-const JUMP_VELOCITY = 200.0
-var jump_count = 2
-var can_jump = true
+const Jump_velocity = 200.0
+var Jump_count = 2
+var Can_jump = true
 
 # Set the Gravity
-var gravity = 450
+var Gravity = 450
 
-#this is a test for github
+#Main fucntion thats being called every frame pls make stuff outside of it and call that function from here if necessary
 func _physics_process(delta):
-	if Input.is_action_pressed("pause_menu"):
-		get_tree().change_scene_to_file("res://UI/main_menu.tscn")
-	if Global.time_running :
-		if is_on_floor(): 
-			dash_count = 2
-			jump_count = 2
-		if dash_count < 1:
-			can_dash = false
-		else:
-			can_dash = true
-		#monitor jump count and stop more jumps in air 
-		if jump_count < 1:
-			can_jump = false
-		else:
-			can_jump = true	# Add the gravity.
-		if not is_on_floor():
-			if Global.is_climbing == false:
-				velocity.y += gravity * delta
-			# monitor dash count and stop dashes
-		if Global.is_climbing == true:
-			if Input.is_action_pressed("sprint"):
-				velocity.y = 0
-			if Input.is_action_pressed("climb_down"):
-				velocity.y = 250
-			if Input.is_action_pressed("climb_up"):
-				velocity.y = -250
-		# Handle Jump.
-		if Input.is_action_just_pressed("jump") and can_jump:
-			velocity.y = JUMP_VELOCITY * (-1)
-			jump_count = jump_count-1
-		
-		if Input.is_action_just_pressed("dash") and can_dash:
-			dashing = true
-			dash_count = dash_count-1
-			$dash_timer.start()
-		#Handle crouch 
-		if Input.is_action_pressed("crouch"):
-			log( 1.5)
-			_scale.y = 0.5
-			set_scale(_scale)
-		if Input.is_action_just_released("crouch"):
-			_scale.y = 1
-			set_scale(_scale)
-		#Implement the sprint action by increasing and decreasing speed
-		if Input.is_action_pressed("sprint"):
-			SPEED = 1200
-		if Input.is_action_just_released("sprint"):
-			SPEED = x
-		# Get the input direction and handle the movement/deceleration.
-		var direction = Input.get_axis("left", "right")
-		if direction:
-			if dashing:
-				velocity.x = direction * DASH_SPEED
-			else:
-				velocity.x = direction * SPEED
-		else:
-			velocity.x = move_toward(velocity.x, 0, SPEED)
+	_movement_handler()
+	_pause_menu()
+	_handle_game_time()
 	move_and_slide()
 
-#make it stop
+func _handle_climbing():
+	if Global.is_climbing == true:
+		Gravity = 0
+		if Input.is_action_pressed("ui_down"):
+			velocity.y = 50
+		if Input.is_action_pressed("ui_up"):
+			velocity.y = -50
+		if Input.is_action_just_released("ui_down"):
+			velocity.y = 0
+		if Input.is_action_just_released("ui_up"):
+			velocity.y = 0
+	if Global.is_climbing == false:
+		Gravity = 450	
+
+func _pause_menu():
+	if Input.is_action_pressed("pause_menu"):
+		get_tree().change_scene_to_file("res://UI/main_menu.tscn")
+
+func _handle_game_time():
+	if Global.time_running :
+		if is_on_floor(): 
+			Dash_count = 2
+			Jump_count = 2
+		if Dash_count < 1:
+			Can_dash = false
+		else:
+			Can_dash = true
+		#monitor jump count and stop more jumps in air 
+		if Jump_count < 1:
+			Can_jump = false
+		else:
+			Can_jump = true	# Add the gravity.
+		if not is_on_floor():
+			if Global.is_climbing == false:
+				velocity.y += Gravity * 0.0167
+
+func _movement_handler():
+	#Handle crouch 
+	if Input.is_action_pressed("crouch"):
+		log( 1.5)
+		_scale.y = 0.5
+		set_scale(_scale)
+	if Input.is_action_just_released("crouch"):
+		_scale.y = 1
+		set_scale(_scale)
+	if Input.is_action_just_pressed("dash") and Can_dash:
+		Dashing = true
+		Dash_count = Dash_count -1 
+		$dash_timer.start()
+	# Handle Jump.
+	if Input.is_action_just_pressed("ui_accept") and Can_jump:
+		velocity.y = Jump_velocity * (-1)
+		Jump_count = Jump_count-1
+	var directiony = Input.get_axis("ui_up","ui_down")
+	var directionx = Input.get_axis("ui_left", "ui_right")
+	if directionx:
+		if Dashing:
+			velocity.x = directionx * Dash_speed
+			velocity.y = directiony * Dash_speed
+		else:
+			velocity.x = directionx * Speed
+	else:
+		velocity.x = move_toward(velocity.x, 0, Speed)
+		return
+
+#stop timer and set dashing to false
 func _on_dash_timer_timeout() -> void:
-	dashing = false
+	Dashing = false
+
+func _on_area_2d_body_entered(body):
+	pass # Replace with function body.

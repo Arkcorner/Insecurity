@@ -1,6 +1,6 @@
 [gd_scene load_steps=18 format=3 uid="uid://1hrd4mrev6cs"]
 
-[ext_resource type="PackedScene" uid="uid://hfohceos6n65" path="res://scenes/player.tscn" id="1_0nxx7"]
+[ext_resource type="PackedScene" uid="uid://hfohceos6n65" path="res://scenes/Player.tscn" id="1_0nxx7"]
 [ext_resource type="PackedScene" uid="uid://yskydjpi58lf" path="res://scenes/dog_companion.tscn" id="1_cndxm"]
 [ext_resource type="PackedScene" uid="uid://du7dcgq4y481a" path="res://scenes/ladder.tscn" id="2_6t3fa"]
 [ext_resource type="PackedScene" uid="uid://bgwkv326jypjy" path="res://scenes/World_border.tscn" id="3_71wbd"]
@@ -634,7 +634,6 @@ texture_region_size = Vector2i(8, 8)
 6:25/0/physics_layer_0/polygon_0/points = PackedVector2Array(-4, -4, 4, -4, 4, 4, -4, 4)
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_kvh45"]
-load_path = "res://.godot/imported/TilesetIce005.png-f52ef481b920120f12e38f5d02e0c367.ctex"
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5nyds"]
 texture = SubResource("CompressedTexture2D_kvh45")
