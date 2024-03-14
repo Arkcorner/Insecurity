@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://hfohceos6n65"]
 
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="1_4lf3r"]
-[ext_resource type="Texture2D" uid="uid://dco7lxmgy3055" path="res://Assets/Characters/Celste-export.png" id="2_cdfun"]
+[ext_resource type="Texture2D" uid="uid://dco7lxmgy3055" path="res://assets/Characters/Celste-export.png" id="2_cdfun"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5p6pq"]
 size = Vector2(10.8371, 16.0611)

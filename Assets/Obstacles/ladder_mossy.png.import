@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://coflrb8afx8k8"
-path="res://.godot/imported/ladder_mossy.png-903e0afd4ed0ea35af6ca0a42a0f0b1f.ctex"
+path="res://.godot/imported/ladder_mossy.png-a3aa14b62ac9eb284187e17256c372a4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Obstacles/ladder_mossy.png"
-dest_files=["res://.godot/imported/ladder_mossy.png-903e0afd4ed0ea35af6ca0a42a0f0b1f.ctex"]
+source_file="res://assets/Obstacles/ladder_mossy.png"
+dest_files=["res://.godot/imported/ladder_mossy.png-a3aa14b62ac9eb284187e17256c372a4.ctex"]
 
 [params]
 

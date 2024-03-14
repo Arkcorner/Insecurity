@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cusmlq6gxfu5a"
-path="res://.godot/imported/CheckpointCampIdle.png-933d6d09d35d7f438e9895591e8d5749.ctex"
+path="res://.godot/imported/CheckpointCampIdle.png-be5003fb671e06c0752421f76c433ac4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Camp/CheckpointCampIdle.png"
-dest_files=["res://.godot/imported/CheckpointCampIdle.png-933d6d09d35d7f438e9895591e8d5749.ctex"]
+source_file="res://assets/Camp/CheckpointCampIdle.png"
+dest_files=["res://.godot/imported/CheckpointCampIdle.png-be5003fb671e06c0752421f76c433ac4.ctex"]
 
 [params]
 

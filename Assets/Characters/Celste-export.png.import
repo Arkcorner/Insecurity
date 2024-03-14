@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dco7lxmgy3055"
-path="res://.godot/imported/Celste-export.png-ac0cad0be368ac115136c7d910094b3e.ctex"
+path="res://.godot/imported/Celste-export.png-8c4c6d622fbd9cff824a558271c52660.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Characters/Celste-export.png"
-dest_files=["res://.godot/imported/Celste-export.png-ac0cad0be368ac115136c7d910094b3e.ctex"]
+source_file="res://assets/Characters/Celste-export.png"
+dest_files=["res://.godot/imported/Celste-export.png-8c4c6d622fbd9cff824a558271c52660.ctex"]
 
 [params]
 

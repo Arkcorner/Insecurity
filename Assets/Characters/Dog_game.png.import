@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b4osbs7iod1kg"
-path="res://.godot/imported/Dog_game.png-4276b8b3bdd860e113381dce4cd9dc38.ctex"
+path="res://.godot/imported/Dog_game.png-9495178b9facdf729a63c2d86993b9cd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Characters/Dog_game.png"
-dest_files=["res://.godot/imported/Dog_game.png-4276b8b3bdd860e113381dce4cd9dc38.ctex"]
+source_file="res://assets/Characters/Dog_game.png"
+dest_files=["res://.godot/imported/Dog_game.png-9495178b9facdf729a63c2d86993b9cd.ctex"]
 
 [params]
 
