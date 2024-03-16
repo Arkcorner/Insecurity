@@ -1,6 +1,6 @@
 [gd_scene load_steps=18 format=3 uid="uid://1hrd4mrev6cs"]
 
-[ext_resource type="PackedScene" uid="uid://hfohceos6n65" path="res://scenes/Player.tscn" id="1_0nxx7"]
+[ext_resource type="PackedScene" uid="uid://hfohceos6n65" path="res://scenes/player.tscn" id="1_0nxx7"]
 [ext_resource type="PackedScene" uid="uid://yskydjpi58lf" path="res://scenes/dog_companion.tscn" id="1_cndxm"]
 [ext_resource type="PackedScene" uid="uid://du7dcgq4y481a" path="res://scenes/ladder.tscn" id="2_6t3fa"]
 [ext_resource type="PackedScene" uid="uid://bgwkv326jypjy" path="res://scenes/World_border.tscn" id="3_71wbd"]
