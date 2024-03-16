@@ -1,7 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://yskydjpi58lf"]
+[gd_scene load_steps=4 format=3 uid="uid://yskydjpi58lf"]
 
 [ext_resource type="Script" path="res://scenes/dog_companion.gd" id="1_r7gqg"]
-[ext_resource type="Texture2D" uid="uid://cj2domtb3mdmb" path="res://assets/Dog.png" id="2_ijqgk"]
 [ext_resource type="Script" path="res://scenes/dog_name_display.gd" id="3_er3gc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k77ox"]
@@ -18,7 +17,6 @@ shape = SubResource("RectangleShape2D_k77ox")
 [node name="DogPixel" type="Sprite2D" parent="."]
 position = Vector2(11, -13)
 scale = Vector2(0.504, 0.456667)
-texture = ExtResource("2_ijqgk")
 
 [node name="dog_name_display" type="Label" parent="."]
 offset_left = -48.0
