@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=3 uid="uid://dq6cop6wpvn3p"]
+
+[ext_resource type="Script" path="res://scripts/strawberry.gd" id="1_hpwuq"]
+[ext_resource type="Texture2D" uid="uid://w5dqwyahgweh" path="res://assets/IconTemp.jpg" id="1_qnnu6"]
+[ext_resource type="Texture2D" uid="uid://cip0ocitxbyn8" path="res://assets/PixelDog.png" id="3_ju3ou"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t36w5"]
+size = Vector2(50, 27)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nk1uf"]
+
+[node name="Strawberry" type="Node2D"]
+script = ExtResource("1_hpwuq")
+
+[node name="Strawberry_Item" type="Area2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Strawberry_Item"]
+position = Vector2(-13.7932, -13.4375)
+scale = Vector2(0.164394, 0.164394)
+texture = ExtResource("1_qnnu6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Strawberry_Item"]
+position = Vector2(-14, -13.5)
+shape = SubResource("RectangleShape2D_t36w5")
+
+[node name="Strawberry_Clear" type="Area2D" parent="."]
+position = Vector2(172, 3)
+
+[node name="Sprite2D" type="Sprite2D" parent="Strawberry_Clear"]
+position = Vector2(108, 18)
+texture = ExtResource("3_ju3ou")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Strawberry_Clear"]
+position = Vector2(108, 19)
+shape = SubResource("RectangleShape2D_nk1uf")
+
+[connection signal="body_entered" from="Strawberry_Item" to="." method="_on_strawberry_item_body_entered"]
+[connection signal="body_entered" from="Strawberry_Clear" to="." method="_on_strawberry_clear_body_entered"]

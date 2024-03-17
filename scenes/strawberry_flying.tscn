@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://bntdhjjh3shdx"]
+
+[ext_resource type="Texture2D" uid="uid://w5dqwyahgweh" path="res://assets/IconTemp.jpg" id="1_juq0t"]
+[ext_resource type="Script" path="res://scripts/strawberry_flying.gd" id="1_ssmtk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6t40n"]
+size = Vector2(50, 27)
+
+[node name="Strawberry - Flying" type="Area2D"]
+script = ExtResource("1_ssmtk")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-13.7932, -13.4375)
+scale = Vector2(0.164394, 0.164394)
+texture = ExtResource("1_juq0t")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-14, -13.5)
+shape = SubResource("RectangleShape2D_6t40n")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
