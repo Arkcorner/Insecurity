@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cg1il88ftsniq" path="res://assets/Art/Tiles/T_ice.png" id="4_sdege"]
 [ext_resource type="Texture2D" uid="uid://c42jyvjmec05u" path="res://assets/Art/Tiles/T_ground.png" id="5_nqu61"]
 [ext_resource type="Texture2D" uid="uid://cvomhqq0v1xgm" path="res://assets/Art/Tiles/T_interactables.png" id="6_vimvh"]
-[ext_resource type="PackedScene" uid="uid://dmidc0bs8wbcn" path="res://scenes/Husky.tscn" id="7_ebke4"]
+[ext_resource type="Texture2D" uid="uid://b4osbs7iod1kg" path="res://assets/Art/Characters/Dog/Dog_game.png" id="7_ileuw"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_88cs2"]
 texture = ExtResource("3_v5tf4")
@@ -1590,5 +1590,6 @@ tile_set = SubResource("TileSet_d3r8t")
 cell_quadrant_size = 8
 format = 2
 
-[node name="Husky" parent="." instance=ExtResource("7_ebke4")]
-position = Vector2(263, -158)
+[node name="DogGame" type="Sprite2D" parent="."]
+position = Vector2(145, -282)
+texture = ExtResource("7_ileuw")
