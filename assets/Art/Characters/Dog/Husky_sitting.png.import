@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bvt0yvg3kgbrq"
-path="res://.godot/imported/TBGTilesetIce005.png-7ed633a6af18aa4ce78ce4eee61560b7.ctex"
+uid="uid://bb2tktyfwntp5"
+path="res://.godot/imported/Husky_sitting.png-294bc7f19da3a73eae534daa9f9a644a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Tiles/TBGTilesetIce005.png"
-dest_files=["res://.godot/imported/TBGTilesetIce005.png-7ed633a6af18aa4ce78ce4eee61560b7.ctex"]
+source_file="res://assets/Art/Characters/Dog/Husky_sitting.png"
+dest_files=["res://.godot/imported/Husky_sitting.png-294bc7f19da3a73eae534daa9f9a644a.ctex"]
 
 [params]
 

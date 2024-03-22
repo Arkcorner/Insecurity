@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cg1il88ftsniq"
-path="res://.godot/imported/TilesetIce006.png-c075ebf8ad83058f3d71134192c6032e.ctex"
+uid="uid://1sdul3lk8qps"
+path="res://.godot/imported/T_grate.png-916b46af9efb31b4a51fdf24695d3bad.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Tiles/TilesetIce006.png"
-dest_files=["res://.godot/imported/TilesetIce006.png-c075ebf8ad83058f3d71134192c6032e.ctex"]
+source_file="res://assets/Art/Tiles/T_grate.png"
+dest_files=["res://.godot/imported/T_grate.png-916b46af9efb31b4a51fdf24695d3bad.ctex"]
 
 [params]
 
