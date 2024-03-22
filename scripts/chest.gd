@@ -7,9 +7,8 @@ extends Area2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$Label_Chest_Open.visible = false
-	$Label_Insecurity_Advice.visible = false
-
+	$Label_Chest_Open.hide()
+	$Label_Insecurity_Advice.hide()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -31,6 +30,7 @@ func _process(delta):
 
 
 func _on_body_entered(body):
+	print(body)
 	if has_been_opened == false:
 		$Label_Chest_Open.visible = true
 	elif has_been_opened == true:

@@ -24,7 +24,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gsjv7"]
-size = Vector2(33.5, 17)
+size = Vector2(33.5, 15.5)
 
 [sub_resource type="LabelSettings" id="LabelSettings_tegi2"]
 font_size = 9
@@ -36,9 +36,10 @@ script = ExtResource("1_wfl4g")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_4wm32")
-animation = &"closed"
+animation = &"open"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -0.75)
 shape = SubResource("RectangleShape2D_gsjv7")
 
 [node name="Label_Chest_Open" type="Label" parent="."]
