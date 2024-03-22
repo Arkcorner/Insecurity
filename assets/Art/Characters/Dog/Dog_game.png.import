@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cvomhqq0v1xgm"
-path="res://.godot/imported/TilemapObjects.png-847a66a86412c976a3b7270729427652.ctex"
+uid="uid://b4osbs7iod1kg"
+path="res://.godot/imported/Dog_game.png-71b3244c6cf05a6087f4b7516413f1de.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Tiles/TilemapObjects.png"
-dest_files=["res://.godot/imported/TilemapObjects.png-847a66a86412c976a3b7270729427652.ctex"]
+source_file="res://assets/Art/Characters/Dog/Dog_game.png"
+dest_files=["res://.godot/imported/Dog_game.png-71b3244c6cf05a6087f4b7516413f1de.ctex"]
 
 [params]
 

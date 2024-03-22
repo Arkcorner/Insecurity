@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://doyyqldssk4tk"
-path="res://.godot/imported/TilemapPreset001.png-e874cdcba61125f0815a1ed4eca39216.ctex"
+uid="uid://cevbre153r0wn"
+path="res://.godot/imported/Husky_tattered.png-daffe3e64991485a8a556411813b7fbd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Tiles/TilemapPreset001.png"
-dest_files=["res://.godot/imported/TilemapPreset001.png-e874cdcba61125f0815a1ed4eca39216.ctex"]
+source_file="res://assets/Art/Characters/Dog/Husky_tattered.png"
+dest_files=["res://.godot/imported/Husky_tattered.png-daffe3e64991485a8a556411813b7fbd.ctex"]
 
 [params]
 

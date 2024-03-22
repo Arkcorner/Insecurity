@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://coflrb8afx8k8"
-path="res://.godot/imported/ladder_mossy.png-c91540a2a55b773f9e048eb8ea4ac2d3.ctex"
+uid="uid://bvt0yvg3kgbrq"
+path="res://.godot/imported/T_ice_background.png-ecdd6eca3aedddc9b2d2e5779440aa90.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ladder_mossy.png"
-dest_files=["res://.godot/imported/ladder_mossy.png-c91540a2a55b773f9e048eb8ea4ac2d3.ctex"]
+source_file="res://assets/Art/Tiles/T_ice_background.png"
+dest_files=["res://.godot/imported/T_ice_background.png-ecdd6eca3aedddc9b2d2e5779440aa90.ctex"]
 
 [params]
 
