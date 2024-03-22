@@ -120,9 +120,11 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fe2d3"]
 size = Vector2(14, 11)
 
-[node name="CharacterBody2D" type="CharacterBody2D"]
+[node name="Husky" type="CharacterBody2D"]
+position = Vector2(7, -6)
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
+visible = false
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_7fvfy")
 frame = 4
