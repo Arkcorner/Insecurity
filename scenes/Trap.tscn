@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://cy4mmgcmnkxue"]
+
+[ext_resource type="Script" path="res://scripts/Trap.gd" id="1_0xbym"]
+[ext_resource type="Texture2D" uid="uid://hopdceoic8vf" path="res://assets/Art/Logo_AWI.jpg" id="1_1s4ev"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6inp7"]
+size = Vector2(54, 18)
+
+[node name="Trap" type="Area2D"]
+script = ExtResource("1_0xbym")
+
+[node name="placeholder" type="Sprite2D" parent="."]
+position = Vector2(0.999989, -7.00001)
+scale = Vector2(0.0297222, 0.0150001)
+texture = ExtResource("1_1s4ev")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, -7)
+shape = SubResource("RectangleShape2D_6inp7")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://ghxcucw0jy2v"]
+
+[ext_resource type="Script" path="res://scripts/Auto_checkpoint.gd" id="1_qp0n8"]
+[ext_resource type="Texture2D" uid="uid://cod0e8mkk2lxu" path="res://assets/Art/Objects/SaveCheckpointCamp.png" id="1_skbge"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5h3q2"]
+size = Vector2(38, 37)
+
+[node name="AutoCheckpoint" type="Area2D"]
+position = Vector2(0, 1)
+script = ExtResource("1_qp0n8")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_skbge")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_5h3q2")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
