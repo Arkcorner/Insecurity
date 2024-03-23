@@ -17,8 +17,14 @@ var Can_jump = true
 # Set the Gravity
 var Gravity = 450
 
+#called for when the scene is instatiated be carefull it gets called every respawn
+func _ready():
+	self.position = Global.spawn_point
+	print("i spawned")
+
 #Main fucntion thats being called every frame pls make stuff outside of it and call that function from here if necessary
 func _physics_process(delta):
+	print(self.position)
 	_movement_handler()
 	_pause_menu()
 	_handle_game_time()
