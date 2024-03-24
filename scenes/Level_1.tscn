@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://dwl14tvwinebd"]
+[gd_scene load_steps=18 format=3 uid="uid://dwl14tvwinebd"]
 
 [ext_resource type="PackedScene" uid="uid://hfohceos6n65" path="res://scenes/player.tscn" id="1_vtfeo"]
 [ext_resource type="Texture2D" uid="uid://doyyqldssk4tk" path="res://assets/Art/Tiles/T_preset.png" id="2_ax57f"]
@@ -7,6 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://c42jyvjmec05u" path="res://assets/Art/Tiles/T_ground.png" id="5_nqu61"]
 [ext_resource type="Texture2D" uid="uid://cvomhqq0v1xgm" path="res://assets/Art/Tiles/T_interactables.png" id="6_vimvh"]
 [ext_resource type="PackedScene" uid="uid://dmidc0bs8wbcn" path="res://scenes/Husky.tscn" id="7_ebke4"]
+[ext_resource type="PackedScene" uid="uid://bapp1hp7w15nq" path="res://UI/pause_menu.tscn" id="8_omwwn"]
+[ext_resource type="PackedScene" uid="uid://cc0ljtrtu65lm" path="res://scenes/chest.tscn" id="9_ks0ct"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_88cs2"]
 texture = ExtResource("3_v5tf4")
@@ -1592,3 +1594,15 @@ format = 2
 
 [node name="Husky" parent="." instance=ExtResource("7_ebke4")]
 position = Vector2(263, -158)
+
+[node name="pause_menu" parent="." instance=ExtResource("8_omwwn")]
+visible = false
+offset_left = 234.0
+offset_top = -59.0
+offset_right = 234.0
+offset_bottom = -59.0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+
+[node name="Chest" parent="." instance=ExtResource("9_ks0ct")]
+position = Vector2(120, -71)

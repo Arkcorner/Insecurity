@@ -38,9 +38,12 @@ func _handle_climbing():
 	if Global.is_climbing == false:
 		Gravity = 450	
 
+#Calls the pause menu and pauses the game
 func _pause_menu():
 	if Input.is_action_pressed("pause_menu"):
-		get_tree().change_scene_to_file("res://UI/main_menu.tscn")
+		get_tree().paused = true
+		var pause_menu = get_parent().get_node("pause_menu")
+		pause_menu.visible = true
 
 func _handle_game_time():
 	if Global.time_running :
