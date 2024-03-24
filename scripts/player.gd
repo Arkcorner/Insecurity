@@ -24,7 +24,6 @@ func _ready():
 
 #Main fucntion thats being called every frame pls make stuff outside of it and call that function from here if necessary
 func _physics_process(delta):
-	print(self.position)
 	_movement_handler()
 	_pause_menu()
 	_handle_game_time()
@@ -98,6 +97,3 @@ func _movement_handler():
 #stop timer and set dashing to false
 func _on_dash_timer_timeout() -> void:
 	Dashing = false
-
-func _on_area_2d_body_entered(body):
-	pass # Replace with function body.
