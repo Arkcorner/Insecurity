@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cvomhqq0v1xgm"
-path="res://.godot/imported/T_interactables.png-69d96efd88fed0541fa4bbcf81ffa168.ctex"
+uid="uid://di4bh8kfl6av5"
+path="res://.godot/imported/CheckpointCamp2.png-4114be021b009a7b1ad11df0a8498fc3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Art/Tiles/T_interactables.png"
-dest_files=["res://.godot/imported/T_interactables.png-69d96efd88fed0541fa4bbcf81ffa168.ctex"]
+source_file="res://assets/Art/Objects/Animated_objects/Checkpoint/CheckpointCamp2.png"
+dest_files=["res://.godot/imported/CheckpointCamp2.png-4114be021b009a7b1ad11df0a8498fc3.ctex"]
 
 [params]
 
