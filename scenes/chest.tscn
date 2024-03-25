@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://cc0ljtrtu65lm"]
 
-[ext_resource type="Texture2D" uid="uid://1l1sxfuumkp1" path="res://assets/Chest_closed.png" id="1_kl02w"]
+[ext_resource type="Texture2D" uid="uid://1l1sxfuumkp1" path="res://assets/Art/Objects/Chest_closed.png" id="1_kl02w"]
 [ext_resource type="Script" path="res://scripts/chest.gd" id="1_wfl4g"]
-[ext_resource type="Texture2D" uid="uid://tuo1ke8jbjtk" path="res://assets/Chest_open.png" id="2_huo35"]
+[ext_resource type="Texture2D" uid="uid://tuo1ke8jbjtk" path="res://assets/Art/Objects/Chest_open.png" id="2_huo35"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_4wm32"]
 animations = [{

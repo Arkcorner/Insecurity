@@ -10,7 +10,7 @@ var Can_dash = true
 var Dash_count = 2
 
 #values for double jump
-const Jump_velocity = 200.0
+const Jump_velocity = 165.0
 var Jump_count = 2
 var Can_jump = true
 
