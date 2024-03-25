@@ -17,8 +17,14 @@ var Can_jump = true
 # Set the Gravity
 var Gravity = 450
 
+#called for when the scene is instatiated be carefull it gets called every respawn
+func _ready():
+	self.position = Global.spawn_point
+	print("i spawned")
+
 #Main fucntion thats being called every frame pls make stuff outside of it and call that function from here if necessary
 func _physics_process(delta):
+	print(self.position)
 	_movement_handler()
 	_pause_menu()
 	_handle_game_time()
@@ -38,9 +44,12 @@ func _handle_climbing():
 	if Global.is_climbing == false:
 		Gravity = 450	
 
+#Calls the pause menu and pauses the game
 func _pause_menu():
 	if Input.is_action_pressed("pause_menu"):
-		get_tree().change_scene_to_file("res://UI/main_menu.tscn")
+		get_tree().paused = true
+		var pause_menu = get_parent().get_node("pause_menu")
+		pause_menu.visible = true
 
 func _handle_game_time():
 	if Global.time_running :
