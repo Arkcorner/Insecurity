@@ -1720,9 +1720,6 @@ position = Vector2(-205, -77)
 [node name="Transition_camera" type="Camera2D" parent="Map/Player"]
 rotation = -5.45764
 zoom = Vector2(6, 6)
-limit_left = 0
-limit_right = 0
-limit_bottom = 0
 position_smoothing_enabled = true
 script = ExtResource("7_pmbax")
 
