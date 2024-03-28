@@ -1,6 +1,6 @@
 extends Control
 
-@onready var pause_menu_advice_scene = preload("res://UI/pause_menu_advice.tscn")
+@onready var pause_menu_advice_scene = preload("res://UI/scenes/pause_menu_advice.tscn")
 @onready var advice_toggle = true
 # Called when the node enters the scene tree for the first time.
 func _ready():

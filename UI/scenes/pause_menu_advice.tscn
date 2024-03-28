@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dwfw6eim02x7j"]
 
-[ext_resource type="Script" path="res://UI/pause_menu_advice.gd" id="1_wx32q"]
+[ext_resource type="Script" path="res://UI/Scripts/pause_menu_advice.gd" id="1_wx32q"]
 
 [node name="pause_menu_advice" type="Label"]
 offset_right = 40.0

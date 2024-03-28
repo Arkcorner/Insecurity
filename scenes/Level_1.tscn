@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://dwl14tvwinebd"]
+[gd_scene load_steps=17 format=3 uid="uid://4vn2ep6w7r5c"]
 
 [ext_resource type="PackedScene" uid="uid://hfohceos6n65" path="res://scenes/player.tscn" id="1_nn20y"]
 [ext_resource type="Texture2D" uid="uid://bvt0yvg3kgbrq" path="res://assets/Art/Tiles/T_ice_background.png" id="2_e2chq"]
@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://c42jyvjmec05u" path="res://assets/Art/Tiles/T_ground.png" id="4_5dbvp"]
 [ext_resource type="Texture2D" uid="uid://doyyqldssk4tk" path="res://assets/Art/Tiles/T_preset.png" id="5_lc3ir"]
 [ext_resource type="Texture2D" uid="uid://b4osbs7iod1kg" path="res://assets/Art/Characters/Dog/Dog_game.png" id="7_d8yyo"]
-[ext_resource type="Script" path="res://scenes/transition_camera.gd" id="7_pmbax"]
+[ext_resource type="Script" path="res://scripts/Transition_camera.gd" id="7_hdac4"]
 [ext_resource type="Texture2D" uid="uid://cvomhqq0v1xgm" path="res://assets/Art/Tiles/Interactables/T_interactables.png" id="8_6l23p"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_88cs2"]
@@ -1721,7 +1721,7 @@ position = Vector2(-205, -77)
 rotation = -5.45764
 zoom = Vector2(6, 6)
 position_smoothing_enabled = true
-script = ExtResource("7_pmbax")
+script = ExtResource("7_hdac4")
 
 [node name="Interactables" type="TileMap" parent="."]
 texture_filter = 1
