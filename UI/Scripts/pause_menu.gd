@@ -2,10 +2,12 @@ extends Control
 
 @onready var pause_menu_advice_scene = preload("res://UI/scenes/pause_menu_advice.tscn")
 @onready var advice_toggle = true
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	visible = false
-	
+
 
 
 
@@ -14,6 +16,9 @@ func _physics_process(delta):
 	if visible == true && advice_toggle == true && Global.advice_array.size() > 1:
 		$Advice_Timer.start()
 		advice_toggle = false
+	global_position = get_parent().get_node("Map/Player/Transition_camera").global_position + Vector2(80,40)
+	
+	_pause_menu()	
 	
 	#if visible == true && Input.is_action_pressed("pause_menu"):
 	#	self.visible = false
@@ -49,5 +54,10 @@ func _on_resume_pressed():
 	self.visible = false
 	get_tree().paused = false
 
+func _pause_menu():
+	if Input.is_action_pressed("pause_menu"):
+		get_tree().paused = true
+		visible = true
+		
 
 
