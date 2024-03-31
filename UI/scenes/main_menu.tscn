@@ -40,16 +40,10 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 50
 text = "Play"
 
-[node name="DebugLvl" type="Button" parent="VBoxContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 50
-text = "Debug Level"
-
 [node name="Quit" type="Button" parent="VBoxContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
 text = "Quit"
 
 [connection signal="pressed" from="VBoxContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
-[connection signal="pressed" from="VBoxContainer/VBoxContainer/DebugLvl" to="." method="_on_debug_lvl_pressed"]
 [connection signal="pressed" from="VBoxContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]

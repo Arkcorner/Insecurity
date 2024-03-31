@@ -10,12 +10,10 @@ func _ready():
 func _process(delta):
 	pass
 
-func _on_debug_lvl_pressed(): get_tree().change_scene_to_file("res://scenes/world.tscn")
-
 func _on_quit_pressed():
 	get_tree().quit()
 	pass # Replace with function body.
 
 func _on_play_pressed():
-	get_tree().change_scene_to_file("res://scenes/world.tscn")
+	get_tree().change_scene_to_file("res://scenes/Level_1.tscn")
 	pass # Replace with function body.

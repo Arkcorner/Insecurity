@@ -45,8 +45,6 @@ func _handle_climbing():
 	if Global.is_climbing == false:
 		Gravity = 450	
 
-
-
 func _handle_game_time():
 	if Global.time_running :
 		if is_on_floor(): 
@@ -78,6 +76,10 @@ func _movement_handler():
 		Dashing = true
 		Dash_count = Dash_count -1 
 		$dash_timer.start()
+	if Input.is_action_pressed("sprint"):
+		Speed = 100
+	if Input.is_action_just_released("sprint"):
+		Speed = 75
 	# Handle Jump.
 	if Input.is_action_just_pressed("ui_accept") and Can_jump:
 		velocity.y = Jump_velocity * (-1)
