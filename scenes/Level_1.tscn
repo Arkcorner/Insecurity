@@ -1736,3 +1736,6 @@ offset_left = -15.0
 offset_top = -65.0
 offset_right = -15.0
 offset_bottom = -65.0
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color(0, 0.494118, 0.929412, 0.827451)

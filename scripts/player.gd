@@ -44,8 +44,6 @@ func _handle_climbing():
 	if Global.is_climbing == false:
 		Gravity = 450	
 
-
-
 func _handle_game_time():
 	if Global.time_running :
 		if is_on_floor(): 
