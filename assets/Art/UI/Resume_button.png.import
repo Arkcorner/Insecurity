@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cvomhqq0v1xgm"
-path="res://.godot/imported/T_interactables.png-69d96efd88fed0541fa4bbcf81ffa168.ctex"
+uid="uid://ctm4iwyjmmgio"
+path="res://.godot/imported/Resume_button.png-274b3d97e9dbd0af2cefc86f2ca57d2f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Art/Tiles/T_interactables.png"
-dest_files=["res://.godot/imported/T_interactables.png-69d96efd88fed0541fa4bbcf81ffa168.ctex"]
+source_file="res://assets/Art/UI/Resume_button.png"
+dest_files=["res://.godot/imported/Resume_button.png-274b3d97e9dbd0af2cefc86f2ca57d2f.ctex"]
 
 [params]
 

@@ -1732,7 +1732,7 @@ cell_quadrant_size = 8
 format = 2
 
 [node name="pause_menu" parent="." instance=ExtResource("9_c85mj")]
-offset_left = -15.0
-offset_top = -65.0
-offset_right = -15.0
-offset_bottom = -65.0
+offset_left = -69.0
+offset_top = -52.0
+offset_right = -69.0
+offset_bottom = -52.0

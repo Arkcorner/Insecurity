@@ -10,12 +10,14 @@ var Can_dash = true
 var Dash_count = 2
 
 #values for double jump
-const Jump_velocity = 200.0
+const Jump_velocity = 165.0
 var Jump_count = 2
 var Can_jump = true
 
 # Set the Gravity
 var Gravity = 450
+
+
 
 #called for when the scene is instatiated be carefull it gets called every respawn
 func _ready():
@@ -25,7 +27,6 @@ func _ready():
 #Main fucntion thats being called every frame pls make stuff outside of it and call that function from here if necessary
 func _physics_process(delta):
 	_movement_handler()
-	_pause_menu()
 	_handle_game_time()
 	move_and_slide()
 
@@ -43,9 +44,7 @@ func _handle_climbing():
 	if Global.is_climbing == false:
 		Gravity = 450	
 
-func _pause_menu():
-	if Input.is_action_pressed("pause_menu"):
-		get_tree().change_scene_to_file("res://UI/main_menu.tscn")
+
 
 func _handle_game_time():
 	if Global.time_running :

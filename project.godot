@@ -11,8 +11,9 @@ config_version=5
 [application]
 
 config/name="Insecurity"
-run/main_scene="res://UI/main_menu.tscn"
+run/main_scene="res://UI/scenes/main_menu.tscn"
 config/features=PackedStringArray("4.1", "GL Compatibility")
+config/icon="res://assets/Art/Characters/Dog/Dog_game.png"
 
 [autoload]
 
