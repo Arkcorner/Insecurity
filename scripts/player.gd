@@ -30,6 +30,7 @@ func _physics_process(delta):
 	_movement_handler()
 	_handle_game_time()
 	move_and_slide()
+	_wall_slide()
 
 func _handle_climbing():
 	if Global.is_climbing == true:
@@ -100,3 +101,11 @@ func _on_dash_timer_timeout() -> void:
 
 func _on_area_2d_body_entered(body):
 	pass # Replace with function body.
+
+func _wall_slide():
+
+	if is_on_wall_only() && velocity.y > 0:
+		Gravity = 100
+	else:
+		Gravity = 450
+
