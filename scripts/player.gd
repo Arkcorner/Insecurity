@@ -29,6 +29,7 @@ func _physics_process(delta):
 	_movement_handler()
 	_handle_game_time()
 	move_and_slide()
+	_wall_slide()
 
 func _handle_climbing():
 	if Global.is_climbing == true:
@@ -75,6 +76,10 @@ func _movement_handler():
 		Dashing = true
 		Dash_count = Dash_count -1 
 		$dash_timer.start()
+	if Input.is_action_pressed("sprint"):
+		Speed = 100
+	if Input.is_action_just_released("sprint"):
+		Speed = 75
 	# Handle Jump.
 	if Input.is_action_just_pressed("ui_accept") and Can_jump:
 		velocity.y = Jump_velocity * (-1)
@@ -94,3 +99,14 @@ func _movement_handler():
 #stop timer and set dashing to false
 func _on_dash_timer_timeout() -> void:
 	Dashing = false
+
+func _on_area_2d_body_entered(body):
+	pass # Replace with function body.
+
+func _wall_slide():
+
+	if is_on_wall_only() && velocity.y > 0:
+		Gravity = 100
+	else:
+		Gravity = 450
+

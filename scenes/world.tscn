@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://otamal1tdnsx"]
+[gd_scene load_steps=11 format=3 uid="uid://dhf160veop22d"]
 
 [ext_resource type="PackedScene" uid="uid://yskydjpi58lf" path="res://scenes/dog_companion.tscn" id="1_1cgvd"]
 [ext_resource type="PackedScene" uid="uid://cgsv3lwnmxlbi" path="res://scenes/Platform.tscn" id="2_bogaa"]
