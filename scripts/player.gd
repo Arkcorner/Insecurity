@@ -26,7 +26,6 @@ func _ready():
 
 #Main fucntion thats being called every frame pls make stuff outside of it and call that function from here if necessary
 func _physics_process(delta):
-	print(self.position)
 	_movement_handler()
 	_handle_game_time()
 	move_and_slide()

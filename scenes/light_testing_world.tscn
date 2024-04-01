@@ -1,0 +1,46 @@
+[gd_scene load_steps=5 format=3 uid="uid://c0kk5jur8jvin"]
+
+[ext_resource type="PackedScene" uid="uid://hfohceos6n65" path="res://scenes/player.tscn" id="1_ln15y"]
+[ext_resource type="PackedScene" uid="uid://cgsv3lwnmxlbi" path="res://scenes/platform.tscn" id="2_rv4rv"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_biuha"]
+
+[sub_resource type="MeshTexture" id="MeshTexture_ds0u3"]
+mesh = SubResource("SphereMesh_biuha")
+
+[node name="LightTestingWorld" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_ln15y")]
+position = Vector2(48, -39)
+
+[node name="PointLight2D2" type="PointLight2D" parent="Player"]
+position = Vector2(-48, 39)
+shadow_enabled = true
+texture = SubResource("MeshTexture_ds0u3")
+texture_scale = 0.5
+
+[node name="Platform" parent="." instance=ExtResource("2_rv4rv")]
+position = Vector2(-161, 56)
+scale = Vector2(0.1, 0.1)
+
+[node name="Platform2" parent="." instance=ExtResource("2_rv4rv")]
+position = Vector2(12, 20)
+scale = Vector2(0.1, 0.1)
+
+[node name="Platform3" parent="." instance=ExtResource("2_rv4rv")]
+position = Vector2(-115, -19)
+scale = Vector2(0.1, 0.1)
+
+[node name="Platform4" parent="." instance=ExtResource("2_rv4rv")]
+position = Vector2(63, -22)
+scale = Vector2(0.1, 0.1)
+
+[node name="Platform5" parent="." instance=ExtResource("2_rv4rv")]
+position = Vector2(228, -15)
+scale = Vector2(0.1, 0.1)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2, 2)
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color(0.796078, 0, 0.0196078, 1)
