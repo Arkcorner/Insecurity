@@ -1,8 +1,8 @@
-[gd_scene load_steps=11 format=3 uid="uid://dhf160veop22d"]
+[gd_scene load_steps=11 format=3 uid="uid://b5mpv2388ubvj"]
 
 [ext_resource type="PackedScene" uid="uid://yskydjpi58lf" path="res://scenes/dog_companion.tscn" id="1_1cgvd"]
 [ext_resource type="PackedScene" uid="uid://cgsv3lwnmxlbi" path="res://scenes/Platform.tscn" id="2_bogaa"]
-[ext_resource type="PackedScene" uid="uid://hfohceos6n65" path="res://scenes/player.tscn" id="3_vequf"]
+[ext_resource type="PackedScene" uid="uid://c3q1ims3vuo60" path="res://scenes/player.tscn" id="3_vequf"]
 [ext_resource type="PackedScene" uid="uid://du7dcgq4y481a" path="res://scenes/ladder.tscn" id="4_vv4wr"]
 [ext_resource type="PackedScene" uid="uid://bgwkv326jypjy" path="res://scenes/World_border.tscn" id="5_o15xp"]
 [ext_resource type="PackedScene" uid="uid://ecbq0jn5cpw3" path="res://scenes/dog_naming.tscn" id="6_qykby"]

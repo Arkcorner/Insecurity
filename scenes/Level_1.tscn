@@ -1,6 +1,6 @@
 [gd_scene load_steps=18 format=3 uid="uid://4vn2ep6w7r5c"]
 
-[ext_resource type="PackedScene" uid="uid://cfr70e3fkc16t" path="res://scenes/player.tscn" id="1_nn20y"]
+[ext_resource type="PackedScene" uid="uid://c3q1ims3vuo60" path="res://scenes/player.tscn" id="1_nn20y"]
 [ext_resource type="Texture2D" uid="uid://bvt0yvg3kgbrq" path="res://assets/Art/Tiles/T_ice_background.png" id="2_e2chq"]
 [ext_resource type="Texture2D" uid="uid://cg1il88ftsniq" path="res://assets/Art/Tiles/T_ice.png" id="3_tlmid"]
 [ext_resource type="Texture2D" uid="uid://c42jyvjmec05u" path="res://assets/Art/Tiles/T_ground.png" id="4_5dbvp"]
