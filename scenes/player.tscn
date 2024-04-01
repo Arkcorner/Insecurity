@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://c3q1ims3vuo60"]
+[gd_scene load_steps=5 format=3 uid="uid://bkyxgrmvbmrt0"]
 
 [ext_resource type="Script" path="res://scripts/Player.gd" id="1_wowva"]
 [ext_resource type="Texture2D" uid="uid://dco7lxmgy3055" path="res://assets/Art/Characters/Player.png" id="2_36iuh"]
+[ext_resource type="Script" path="res://scripts/States/State Machine.gd" id="3_pv2qb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5p6pq"]
 size = Vector2(11, 16)
@@ -20,5 +21,8 @@ shape = SubResource("RectangleShape2D_5p6pq")
 
 [node name="dash_timer" type="Timer" parent="."]
 wait_time = 0.2
+
+[node name="State Machine" type="Node" parent="."]
+script = ExtResource("3_pv2qb")
 
 [connection signal="timeout" from="dash_timer" to="." method="_on_dash_timer_timeout"]
