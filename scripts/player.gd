@@ -69,9 +69,13 @@ func _movement_handler():
 		log( 1.5)
 		_scale.y = 0.5
 		set_scale(_scale)
+		Speed = 25
+		Can_jump = false
 	if Input.is_action_just_released("crouch"):
 		_scale.y = 1
 		set_scale(_scale)
+		Speed = 75
+		Can_jump = true
 	if Input.is_action_just_pressed("dash") and Can_dash:
 		Dashing = true
 		Dash_count = Dash_count -1 
