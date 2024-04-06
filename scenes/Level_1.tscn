@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://4vn2ep6w7r5c"]
+[gd_scene load_steps=19 format=3 uid="uid://4vn2ep6w7r5c"]
 
 [ext_resource type="PackedScene" uid="uid://bkommoqyffoab" path="res://scenes/player.tscn" id="1_nn20y"]
 [ext_resource type="Texture2D" uid="uid://bvt0yvg3kgbrq" path="res://assets/Art/Tiles/T_ice_background.png" id="2_e2chq"]
@@ -9,6 +9,7 @@
 [ext_resource type="Script" path="res://scripts/Transition_camera.gd" id="7_hdac4"]
 [ext_resource type="Texture2D" uid="uid://cvomhqq0v1xgm" path="res://assets/Art/Tiles/Interactables/T_interactables.png" id="8_6l23p"]
 [ext_resource type="PackedScene" uid="uid://bapp1hp7w15nq" path="res://UI/scenes/pause_menu.tscn" id="9_c85mj"]
+[ext_resource type="PackedScene" uid="uid://ghxcucw0jy2v" path="res://scenes/Auto_checkpoint.tscn" id="10_ngteu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_88cs2"]
 texture = ExtResource("2_e2chq")
@@ -1739,3 +1740,6 @@ offset_bottom = -65.0
 
 [node name="LightingColour" type="CanvasModulate" parent="."]
 color = Color(0.996078, 0.898039, 0.560784, 1)
+
+[node name="AutoCheckpoint" parent="." instance=ExtResource("10_ngteu")]
+position = Vector2(-275, -96)

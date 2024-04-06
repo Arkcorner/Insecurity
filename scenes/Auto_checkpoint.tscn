@@ -1,7 +1,39 @@
-[gd_scene load_steps=4 format=3 uid="uid://ghxcucw0jy2v"]
+[gd_scene load_steps=9 format=3 uid="uid://ghxcucw0jy2v"]
 
 [ext_resource type="Script" path="res://scripts/Auto_checkpoint.gd" id="1_qp0n8"]
-[ext_resource type="Texture2D" uid="uid://cod0e8mkk2lxu" path="res://assets/Art/Objects/SaveCheckpointCamp.png" id="1_skbge"]
+[ext_resource type="Texture2D" uid="uid://pdfsv766emuf" path="res://assets/Art/Objects/Animated_objects/Checkpoint/CheckpointCampIdle.png" id="3_3x3pq"]
+[ext_resource type="Texture2D" uid="uid://djbqi3a842278" path="res://assets/Art/Objects/Animated_objects/Checkpoint/CheckpointCamp1.png" id="4_2xwk2"]
+[ext_resource type="Texture2D" uid="uid://di4bh8kfl6av5" path="res://assets/Art/Objects/Animated_objects/Checkpoint/CheckpointCamp2.png" id="5_prwgv"]
+[ext_resource type="Texture2D" uid="uid://do577yxmf25cd" path="res://assets/Art/Objects/Animated_objects/Checkpoint/CheckpointCamp3.png" id="6_n3w62"]
+[ext_resource type="Texture2D" uid="uid://bb28u4mkjyf6u" path="res://assets/Art/Objects/Animated_objects/Checkpoint/CheckpointCamp4.png" id="7_6wv8o"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6mytg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_3x3pq")
+}],
+"loop": true,
+"name": &"checkpoint_default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_2xwk2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_prwgv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_n3w62")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_6wv8o")
+}],
+"loop": true,
+"name": &"checkpoint_reached",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5h3q2"]
 size = Vector2(38, 37)
@@ -10,9 +42,9 @@ size = Vector2(38, 37)
 position = Vector2(0, 1)
 script = ExtResource("1_qp0n8")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("1_skbge")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_6mytg")
+animation = &"checkpoint_reached"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -0.5)
