@@ -26,10 +26,10 @@ func _ready():
 
 #Main fucntion thats being called every frame pls make stuff outside of it and call that function from here if necessary
 func _physics_process(delta):
-	print(self.position)
 	_movement_handler()
 	_handle_game_time()
 	move_and_slide()
+	_wall_slide()
 
 func _handle_climbing():
 	if Global.is_climbing == true:
@@ -69,9 +69,13 @@ func _movement_handler():
 		log( 1.5)
 		_scale.y = 0.5
 		set_scale(_scale)
+		Speed = 25
+		Can_jump = false
 	if Input.is_action_just_released("crouch"):
 		_scale.y = 1
 		set_scale(_scale)
+		Speed = 75
+		Can_jump = true
 	if Input.is_action_just_pressed("dash") and Can_dash:
 		Dashing = true
 		Dash_count = Dash_count -1 
@@ -102,3 +106,11 @@ func _on_dash_timer_timeout() -> void:
 
 func _on_area_2d_body_entered(body):
 	pass # Replace with function body.
+
+func _wall_slide():
+
+	if is_on_wall_only() && velocity.y > 0:
+		Gravity = 100
+	else:
+		Gravity = 450
+

@@ -18,7 +18,7 @@ func _physics_process(delta):
 		advice_toggle = false
 	global_position = get_parent().get_node("Map/Player/Transition_camera").global_position + Vector2(80,40)
 	
-	_pause_menu()	
+	_pause_menu()
 	
 	#if visible == true && Input.is_action_pressed("pause_menu"):
 	#	self.visible = false
