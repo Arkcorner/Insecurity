@@ -13,16 +13,17 @@ var Dash_count = 2
 const Jump_velocity = 165.0
 var Jump_count = 2
 var Can_jump = true
-
 # Set the Gravity
 var Gravity = 450
 
 
+@onready var state_machine_tree = $StateMachineTree
 
 #called for when the scene is instatiated be carefull it gets called every respawn
 func _ready():
 	self.position = Global.spawn_point
 	print("i spawned")
+	
 
 #Main fucntion thats being called every frame pls make stuff outside of it and call that function from here if necessary
 func _physics_process(delta):
@@ -84,13 +85,20 @@ func _movement_handler():
 		Speed = 100
 	if Input.is_action_just_released("sprint"):
 		Speed = 75
+		
 	# Handle Jump.
 	if Input.is_action_just_pressed("ui_accept") and Can_jump:
 		velocity.y = Jump_velocity * (-1)
 		Jump_count = Jump_count-1
 	var directiony = Input.get_axis("ui_up","ui_down")
 	var directionx = Input.get_axis("ui_left", "ui_right")
+	if Input.is_action_just_pressed("ui_left"):
+		$Player_sprite.set_flip_h(true)
+		
+	if Input.is_action_just_pressed("ui_right"):
+		$Player_sprite.set_flip_h(false)
 	if directionx:
+		state_machine_tree.set("parameters/conditions/walking", true)
 		if Dashing:
 			velocity.x = directionx * Dash_speed
 			velocity.y = directiony * Dash_speed
