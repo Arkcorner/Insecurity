@@ -51,7 +51,7 @@ animations = [{
 
 [node name="Pedals" type="Node2D"]
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="Pedals_as_leaves" type="AnimatedSprite2D" parent="."]
 modulate = Color(0, 0.670588, 0.0117647, 0.627451)
 texture_filter = 1
 position = Vector2(1.78814e-06, 1.99999)
@@ -60,7 +60,7 @@ sprite_frames = SubResource("SpriteFrames_qy58k")
 autoplay = "default"
 frame_progress = 0.963987
 
-[node name="AnimatedSprite2D4" type="AnimatedSprite2D" parent="."]
+[node name="Pedals_as_leaves2" type="AnimatedSprite2D" parent="."]
 modulate = Color(0, 0.670588, 0.0117647, 0.627451)
 texture_filter = 1
 position = Vector2(0, 182)
@@ -69,7 +69,7 @@ sprite_frames = SubResource("SpriteFrames_qy58k")
 autoplay = "default"
 frame_progress = 0.963987
 
-[node name="AnimatedSprite2D5" type="AnimatedSprite2D" parent="."]
+[node name="Pedals_as_leaves3" type="AnimatedSprite2D" parent="."]
 modulate = Color(0, 0.670588, 0.0117647, 0.627451)
 texture_filter = 1
 position = Vector2(-320, -2)
@@ -78,7 +78,7 @@ sprite_frames = SubResource("SpriteFrames_qy58k")
 autoplay = "default"
 frame_progress = 0.963987
 
-[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
+[node name="Pedals_as_leaves4" type="AnimatedSprite2D" parent="."]
 modulate = Color(0, 0.670588, 0.0117647, 0.627451)
 texture_filter = 1
 position = Vector2(320, 2)
@@ -87,7 +87,7 @@ sprite_frames = SubResource("SpriteFrames_qy58k")
 autoplay = "default"
 frame_progress = 0.963987
 
-[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="."]
+[node name="Pedals_as_leaves5" type="AnimatedSprite2D" parent="."]
 modulate = Color(0, 0.670588, 0.0117647, 0.627451)
 texture_filter = 1
 position = Vector2(0, -182)
