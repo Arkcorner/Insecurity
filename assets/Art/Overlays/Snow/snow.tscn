@@ -1,0 +1,134 @@
+[gd_scene load_steps=22 format=3 uid="uid://cjtbisu74gdap"]
+
+[ext_resource type="Texture2D" uid="uid://dpaos0v0deh4r" path="res://assets/Art/Overlays/Snow/Layer 1.png" id="1_d8uml"]
+[ext_resource type="Texture2D" uid="uid://jgjfpytj44de" path="res://assets/Art/Overlays/Snow/Layer 2.png" id="2_ypnac"]
+[ext_resource type="Texture2D" uid="uid://cf42o6pirp2vx" path="res://assets/Art/Overlays/Snow/Layer 3.png" id="3_fgl2k"]
+[ext_resource type="Texture2D" uid="uid://idko0nan6m88" path="res://assets/Art/Overlays/Snow/Layer 4.png" id="4_7brtn"]
+[ext_resource type="Texture2D" uid="uid://cslecy3lchyhx" path="res://assets/Art/Overlays/Snow/Layer 5.png" id="5_hal0i"]
+[ext_resource type="Texture2D" uid="uid://chdln4w7kuhgw" path="res://assets/Art/Overlays/Snow/Layer 6.png" id="6_at3xq"]
+[ext_resource type="Texture2D" uid="uid://ior5aroalelt" path="res://assets/Art/Overlays/Snow/Layer 7.png" id="7_md7lg"]
+[ext_resource type="Texture2D" uid="uid://dbvhg0d372cwu" path="res://assets/Art/Overlays/Snow/Layer 8.png" id="8_ihvub"]
+[ext_resource type="Texture2D" uid="uid://cflefiv61dvo2" path="res://assets/Art/Overlays/Snow/Layer 9.png" id="9_87hmc"]
+[ext_resource type="Texture2D" uid="uid://bp6pamtvpj7vm" path="res://assets/Art/Overlays/Snow/Layer 10.png" id="10_ynam6"]
+[ext_resource type="Texture2D" uid="uid://lho3v22qk320" path="res://assets/Art/Overlays/Snow/Layer 11.png" id="11_e45q3"]
+[ext_resource type="Texture2D" uid="uid://bwivtqhiw84mg" path="res://assets/Art/Overlays/Snow/Layer 12.png" id="12_gqnyd"]
+[ext_resource type="Texture2D" uid="uid://soy58mwryvwh" path="res://assets/Art/Overlays/Snow/Layer 13.png" id="13_kcnq3"]
+[ext_resource type="Texture2D" uid="uid://cer2os02b8lf0" path="res://assets/Art/Overlays/Snow/Layer 14.png" id="14_72fse"]
+[ext_resource type="Texture2D" uid="uid://bni7ggghkcomh" path="res://assets/Art/Overlays/Snow/Layer 15.png" id="15_5sl5b"]
+[ext_resource type="Texture2D" uid="uid://r7ibwoff3fh0" path="res://assets/Art/Overlays/Snow/Layer 16.png" id="16_s7xok"]
+[ext_resource type="Texture2D" uid="uid://f3dg68m1451" path="res://assets/Art/Overlays/Snow/Layer 17.png" id="17_3n24u"]
+[ext_resource type="Texture2D" uid="uid://cqdd64htbsoau" path="res://assets/Art/Overlays/Snow/Layer 18.png" id="18_5bxk2"]
+[ext_resource type="Texture2D" uid="uid://bf13jc48wp16b" path="res://assets/Art/Overlays/Snow/Layer 19.png" id="19_ocvci"]
+[ext_resource type="Texture2D" uid="uid://c8r6s8gk1ivkj" path="res://assets/Art/Overlays/Snow/Layer 20.png" id="20_ov8tl"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hklv4"]
+resource_local_to_scene = true
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_d8uml")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_ypnac")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_fgl2k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_7brtn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_hal0i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_at3xq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_md7lg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ihvub")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_87hmc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_ynam6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_e45q3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_gqnyd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_kcnq3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_72fse")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_5sl5b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_s7xok")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_3n24u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_5bxk2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_ocvci")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_ov8tl")
+}],
+"loop": true,
+"name": &"default",
+"speed": 20.0
+}]
+
+[node name="Snow" type="Node2D"]
+scale = Vector2(0.8, 0.6)
+
+[node name="Snow_middle" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-0.25, 0.889875)
+scale = Vector2(1.00125, 1.00593)
+sprite_frames = SubResource("SpriteFrames_hklv4")
+autoplay = "default"
+frame_progress = 0.182311
+
+[node name="Snow_left" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-400, 0)
+sprite_frames = SubResource("SpriteFrames_hklv4")
+autoplay = "default"
+frame = 13
+frame_progress = 0.0431161
+
+[node name="Snow_up" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0, -300)
+sprite_frames = SubResource("SpriteFrames_hklv4")
+autoplay = "default"
+frame = 13
+frame_progress = 0.0431161
+
+[node name="Snow_down" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0, 300)
+sprite_frames = SubResource("SpriteFrames_hklv4")
+autoplay = "default"
+frame = 13
+frame_progress = 0.0431161
+
+[node name="Snow_right" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(400, 0)
+sprite_frames = SubResource("SpriteFrames_hklv4")
+autoplay = "default"
+frame = 13
+frame_progress = 0.0431161

@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://4vn2ep6w7r5c"]
+[gd_scene load_steps=42 format=3 uid="uid://4vn2ep6w7r5c"]
 
 [ext_resource type="PackedScene" uid="uid://bkommoqyffoab" path="res://scenes/player.tscn" id="1_nn20y"]
 [ext_resource type="Texture2D" uid="uid://bvt0yvg3kgbrq" path="res://assets/Art/Tiles/T_ice_background.png" id="2_e2chq"]
@@ -7,8 +7,10 @@
 [ext_resource type="Texture2D" uid="uid://doyyqldssk4tk" path="res://assets/Art/Tiles/T_preset.png" id="5_lc3ir"]
 [ext_resource type="Texture2D" uid="uid://b4osbs7iod1kg" path="res://assets/Art/Characters/Dog/Dog_game.png" id="7_d8yyo"]
 [ext_resource type="Script" path="res://scripts/Transition_camera.gd" id="7_hdac4"]
+[ext_resource type="PackedScene" uid="uid://b74dks2385lqa" path="res://scenes/snow.tscn" id="8_1swry"]
 [ext_resource type="Texture2D" uid="uid://dpaos0v0deh4r" path="res://assets/Art/Overlays/Snow/Layer 1.png" id="8_06igb"]
 [ext_resource type="Texture2D" uid="uid://cvomhqq0v1xgm" path="res://assets/Art/Tiles/Interactables/T_interactables.png" id="8_6l23p"]
+[ext_resource type="PackedScene" uid="uid://bbynxnkb5r1c" path="res://scenes/wind_placeholder.tscn" id="9_6tlli"]
 [ext_resource type="PackedScene" uid="uid://bapp1hp7w15nq" path="res://UI/scenes/pause_menu.tscn" id="9_c85mj"]
 [ext_resource type="Texture2D" uid="uid://jgjfpytj44de" path="res://assets/Art/Overlays/Snow/Layer 2.png" id="9_w3kpc"]
 [ext_resource type="Texture2D" uid="uid://cf42o6pirp2vx" path="res://assets/Art/Overlays/Snow/Layer 3.png" id="10_g3eso"]
@@ -29,6 +31,7 @@
 [ext_resource type="Texture2D" uid="uid://cqdd64htbsoau" path="res://assets/Art/Overlays/Snow/Layer 18.png" id="25_diecl"]
 [ext_resource type="Texture2D" uid="uid://bf13jc48wp16b" path="res://assets/Art/Overlays/Snow/Layer 19.png" id="26_3vg1h"]
 [ext_resource type="Texture2D" uid="uid://c8r6s8gk1ivkj" path="res://assets/Art/Overlays/Snow/Layer 20.png" id="27_lipip"]
+[ext_resource type="PackedScene" uid="uid://blhdidvbtycjy" path="res://scenes/pedals.tscn" id="30_3m3la"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_88cs2"]
 texture = ExtResource("2_e2chq")
@@ -1668,7 +1671,7 @@ sources/0 = SubResource("TileSetAtlasSource_w2vlg")
 sources/1 = SubResource("TileSetAtlasSource_0g60s")
 sources/2 = SubResource("TileSetAtlasSource_e6arb")
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_hklv4"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_s7y40"]
 resource_local_to_scene = true
 animations = [{
 "frames": [{
@@ -1808,53 +1811,31 @@ texture_filter = 1
 position = Vector2(-205, -77)
 
 [node name="Transition_camera" type="Camera2D" parent="Map/Player"]
+position = Vector2(45, -14)
 zoom = Vector2(6, 6)
 position_smoothing_enabled = true
 script = ExtResource("7_hdac4")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Map/Player/Transition_camera"]
-texture_filter = 1
-scale = Vector2(0.8, 0.6)
-sprite_frames = SubResource("SpriteFrames_hklv4")
-autoplay = "default"
-frame = 13
-frame_progress = 0.0431161
+[node name="Snow" parent="Map/Player/Transition_camera" instance=ExtResource("8_1swry")]
 
-[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Map/Player/Transition_camera"]
-texture_filter = 1
-position = Vector2(-320, 0)
-scale = Vector2(0.8, 0.6)
-sprite_frames = SubResource("SpriteFrames_hklv4")
-autoplay = "default"
-frame = 13
-frame_progress = 0.0431161
+[node name="Snow_middle" parent="Map/Player/Transition_camera/Snow" index="0"]
+sprite_frames = SubResource("SpriteFrames_s7y40")
 
-[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="Map/Player/Transition_camera"]
-texture_filter = 1
-position = Vector2(0, -180)
-scale = Vector2(0.8, 0.6)
-sprite_frames = SubResource("SpriteFrames_hklv4")
-autoplay = "default"
-frame = 13
-frame_progress = 0.0431161
+[node name="Snow_left" parent="Map/Player/Transition_camera/Snow" index="1"]
+sprite_frames = SubResource("SpriteFrames_s7y40")
 
-[node name="AnimatedSprite2D4" type="AnimatedSprite2D" parent="Map/Player/Transition_camera"]
-texture_filter = 1
-position = Vector2(0, 180)
-scale = Vector2(0.8, 0.6)
-sprite_frames = SubResource("SpriteFrames_hklv4")
-autoplay = "default"
-frame = 13
-frame_progress = 0.0431161
+[node name="Snow_up" parent="Map/Player/Transition_camera/Snow" index="2"]
+sprite_frames = SubResource("SpriteFrames_s7y40")
 
-[node name="AnimatedSprite2D5" type="AnimatedSprite2D" parent="Map/Player/Transition_camera"]
-texture_filter = 1
-position = Vector2(320, 0)
-scale = Vector2(0.8, 0.6)
-sprite_frames = SubResource("SpriteFrames_hklv4")
-autoplay = "default"
-frame = 13
-frame_progress = 0.0431161
+[node name="Snow_down" parent="Map/Player/Transition_camera/Snow" index="3"]
+sprite_frames = SubResource("SpriteFrames_s7y40")
+
+[node name="Snow_right" parent="Map/Player/Transition_camera/Snow" index="4"]
+sprite_frames = SubResource("SpriteFrames_s7y40")
+
+[node name="Wind_placeholder" parent="Map/Player/Transition_camera" instance=ExtResource("9_6tlli")]
+
+[node name="Pedals" parent="Map/Player/Transition_camera" instance=ExtResource("30_3m3la")]
 
 [node name="Interactables" type="TileMap" parent="."]
 texture_filter = 1
@@ -1864,6 +1845,10 @@ cell_quadrant_size = 8
 format = 2
 
 [node name="pause_menu" parent="." instance=ExtResource("9_c85mj")]
+offset_left = 218.0
+offset_top = 128.0
+offset_right = 218.0
+offset_bottom = 128.0
 
 [node name="LightingColour" type="CanvasModulate" parent="."]
 visible = false
@@ -1874,4 +1859,9 @@ visible = false
 color = Color(0.231373, 0.301961, 0.988235, 1)
 
 [node name="Snowstorm" type="CanvasModulate" parent="."]
+visible = false
 color = Color(0.447059, 0.843137, 1, 0.705882)
+
+[editable path="Map/Player/Transition_camera/Snow"]
+[editable path="Map/Player/Transition_camera/Wind_placeholder"]
+[editable path="Map/Player/Transition_camera/Pedals"]
