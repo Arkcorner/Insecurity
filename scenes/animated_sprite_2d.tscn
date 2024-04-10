@@ -1,0 +1,63 @@
+[gd_scene load_steps=12 format=3 uid="uid://did07reuebpy2"]
+
+[ext_resource type="Texture2D" uid="uid://d130am3dsm5kk" path="res://assets/Art/Overlays/Pedals_a_lot/Layer 1.png" id="1_qw4ek"]
+[ext_resource type="Texture2D" uid="uid://m0tl131mi3o6" path="res://assets/Art/Overlays/Pedals_a_lot/Layer 2.png" id="2_jh7dr"]
+[ext_resource type="Texture2D" uid="uid://2dipboa04hw4" path="res://assets/Art/Overlays/Pedals_a_lot/Layer 3.png" id="3_j3don"]
+[ext_resource type="Texture2D" uid="uid://g2h5jpyn7lll" path="res://assets/Art/Overlays/Pedals_a_lot/Layer 4.png" id="4_61fy4"]
+[ext_resource type="Texture2D" uid="uid://cg30x6u7tx1no" path="res://assets/Art/Overlays/Pedals_a_lot/Layer 5.png" id="5_bcgbb"]
+[ext_resource type="Texture2D" uid="uid://linfekmm21yq" path="res://assets/Art/Overlays/Pedals_a_lot/Layer 6.png" id="6_7jj3a"]
+[ext_resource type="Texture2D" uid="uid://cjylwdgtaaj48" path="res://assets/Art/Overlays/Pedals_a_lot/Layer 7.png" id="7_s2rnl"]
+[ext_resource type="Texture2D" uid="uid://bud36a06fywcr" path="res://assets/Art/Overlays/Pedals_a_lot/Layer 8.png" id="8_nbcqj"]
+[ext_resource type="Texture2D" uid="uid://w2nxxwunf3ax" path="res://assets/Art/Overlays/Pedals_a_lot/Layer 9.png" id="9_gi5rf"]
+[ext_resource type="Texture2D" uid="uid://cx2n6yxdk4syh" path="res://assets/Art/Overlays/Pedals_a_lot/Layer 10.png" id="10_bhw2k"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gu8lr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_qw4ek")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_jh7dr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_j3don")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_61fy4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_bcgbb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_7jj3a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_s2rnl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_nbcqj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_gi5rf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_bhw2k")
+}],
+"loop": true,
+"name": &"default",
+"speed": 9.0
+}]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D"]
+position = Vector2(0, 1.25)
+scale = Vector2(2, 1.59565)
+sprite_frames = SubResource("SpriteFrames_gu8lr")
+autoplay = "default"
+frame_progress = 0.370232
+
+[node name="Night" type="CanvasModulate" parent="."]
+clip_children = 2
+position = Vector2(0, -0.783379)
+scale = Vector2(0.5, 0.626703)
+color = Color(0.231373, 0.301961, 0.988235, 1)

@@ -1,0 +1,59 @@
+[gd_scene load_steps=6 format=3 uid="uid://dye0ngps03q2s"]
+
+[ext_resource type="Texture2D" uid="uid://cirvdns4ihhjc" path="res://assets/Art/Overlays/Rain_or_horizontal_wind/Layer 1.png" id="1_65u6p"]
+[ext_resource type="Texture2D" uid="uid://dwltyf14ekya" path="res://assets/Art/Overlays/Rain_or_horizontal_wind/Layer 2.png" id="2_bjpp4"]
+[ext_resource type="Texture2D" uid="uid://dlrmrwffqco3" path="res://assets/Art/Overlays/Rain_or_horizontal_wind/Layer 3.png" id="3_r71el"]
+[ext_resource type="Texture2D" uid="uid://it7fuy8njep6" path="res://assets/Art/Overlays/Rain_or_horizontal_wind/Layer 4.png" id="4_16mgn"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mspsj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_65u6p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_bjpp4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_r71el")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_16mgn")
+}],
+"loop": true,
+"name": &"default",
+"speed": 20.0
+}]
+
+[node name="Wind_intense" type="Node2D"]
+visible = false
+scale = Vector2(0.8, 0.6)
+
+[node name="Wind_middle" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(16.7539, 0.450897)
+rotation = 1.5708
+scale = Vector2(-1.68114, 6.36457)
+sprite_frames = SubResource("SpriteFrames_mspsj")
+autoplay = "default"
+frame = 2
+frame_progress = 0.51234
+
+[node name="Wind_middle2" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(16.7539, 0.450897)
+rotation = 1.5708
+scale = Vector2(3.03065, 3.25609)
+sprite_frames = SubResource("SpriteFrames_mspsj")
+autoplay = "default"
+frame = 1
+frame_progress = 0.0526758
+
+[node name="Wind_middle3" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(52.7487, -18.6373)
+rotation = 1.5708
+scale = Vector2(-0.860276, 3.56464)
+sprite_frames = SubResource("SpriteFrames_mspsj")
+autoplay = "default"
+frame_progress = 0.470463
