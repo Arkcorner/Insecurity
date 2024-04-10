@@ -1,0 +1,97 @@
+[gd_scene load_steps=12 format=3 uid="uid://blhdidvbtycjy"]
+
+[ext_resource type="Texture2D" uid="uid://d130am3dsm5kk" path="res://assets/Art/Overlays/Pedals_a_lot/Layer 1.png" id="1_yp5vr"]
+[ext_resource type="Texture2D" uid="uid://m0tl131mi3o6" path="res://assets/Art/Overlays/Pedals_a_lot/Layer 2.png" id="2_uptp2"]
+[ext_resource type="Texture2D" uid="uid://2dipboa04hw4" path="res://assets/Art/Overlays/Pedals_a_lot/Layer 3.png" id="3_12cli"]
+[ext_resource type="Texture2D" uid="uid://g2h5jpyn7lll" path="res://assets/Art/Overlays/Pedals_a_lot/Layer 4.png" id="4_c5gg5"]
+[ext_resource type="Texture2D" uid="uid://cg30x6u7tx1no" path="res://assets/Art/Overlays/Pedals_a_lot/Layer 5.png" id="5_ao1lw"]
+[ext_resource type="Texture2D" uid="uid://linfekmm21yq" path="res://assets/Art/Overlays/Pedals_a_lot/Layer 6.png" id="6_1h7ut"]
+[ext_resource type="Texture2D" uid="uid://cjylwdgtaaj48" path="res://assets/Art/Overlays/Pedals_a_lot/Layer 7.png" id="7_yuocv"]
+[ext_resource type="Texture2D" uid="uid://bud36a06fywcr" path="res://assets/Art/Overlays/Pedals_a_lot/Layer 8.png" id="8_dkqe7"]
+[ext_resource type="Texture2D" uid="uid://w2nxxwunf3ax" path="res://assets/Art/Overlays/Pedals_a_lot/Layer 9.png" id="9_bfcm7"]
+[ext_resource type="Texture2D" uid="uid://cx2n6yxdk4syh" path="res://assets/Art/Overlays/Pedals_a_lot/Layer 10.png" id="10_7xac7"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qy58k"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_yp5vr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_uptp2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_12cli")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_c5gg5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ao1lw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_1h7ut")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_yuocv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_dkqe7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_bfcm7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_7xac7")
+}],
+"loop": true,
+"name": &"default",
+"speed": 9.0
+}]
+
+[node name="Pedals" type="Node2D"]
+
+[node name="Pedals_as_leaves" type="AnimatedSprite2D" parent="."]
+modulate = Color(0, 0.670588, 0.0117647, 0.627451)
+texture_filter = 1
+position = Vector2(1.78814e-06, 1.99999)
+scale = Vector2(2.00052, 1.53094)
+sprite_frames = SubResource("SpriteFrames_qy58k")
+autoplay = "default"
+frame_progress = 0.963987
+
+[node name="Pedals_as_leaves2" type="AnimatedSprite2D" parent="."]
+modulate = Color(0, 0.670588, 0.0117647, 0.627451)
+texture_filter = 1
+position = Vector2(0, 182)
+scale = Vector2(2, 1.6)
+sprite_frames = SubResource("SpriteFrames_qy58k")
+autoplay = "default"
+frame_progress = 0.963987
+
+[node name="Pedals_as_leaves3" type="AnimatedSprite2D" parent="."]
+modulate = Color(0, 0.670588, 0.0117647, 0.627451)
+texture_filter = 1
+position = Vector2(-320, -2)
+scale = Vector2(2, 1.6)
+sprite_frames = SubResource("SpriteFrames_qy58k")
+autoplay = "default"
+frame_progress = 0.963987
+
+[node name="Pedals_as_leaves4" type="AnimatedSprite2D" parent="."]
+modulate = Color(0, 0.670588, 0.0117647, 0.627451)
+texture_filter = 1
+position = Vector2(320, 2)
+scale = Vector2(1.99891, 1.53167)
+sprite_frames = SubResource("SpriteFrames_qy58k")
+autoplay = "default"
+frame_progress = 0.963987
+
+[node name="Pedals_as_leaves5" type="AnimatedSprite2D" parent="."]
+modulate = Color(0, 0.670588, 0.0117647, 0.627451)
+texture_filter = 1
+position = Vector2(0, -182)
+scale = Vector2(2, 1.6)
+sprite_frames = SubResource("SpriteFrames_qy58k")
+autoplay = "default"
+frame_progress = 0.963987
