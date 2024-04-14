@@ -396,50 +396,50 @@ _data = {
 "walking_animation": SubResource("Animation_05hit")
 }
 
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_r471x"]
+animation = &"character_chrouch_walk"
+
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_pheji"]
 animation = &"character_jump"
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_onjm0"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_elb5t"]
+animation = &"character_walk"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_2edwr"]
 animation = &"idle"
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_6uoma"]
-animation = &"walking_animation"
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_xvaux"]
-advance_mode = 2
-advance_condition = &"idle"
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_4kr3j"]
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_4wpyf"]
 advance_mode = 2
 advance_condition = &"walking"
 
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_tt6k8"]
-advance_mode = 2
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_v8kio"]
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_uinnu"]
 advance_mode = 2
 advance_condition = &"jumping"
 
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_n6kxn"]
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_1arer"]
+advance_mode = 2
+advance_condition = &"crouching"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_47rst"]
 advance_mode = 2
 advance_condition = &"walking"
 
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_t8c3c"]
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_nypx6"]
 advance_mode = 2
-advance_condition = &"jumping"
 
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_b7pl5"]
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_f3soc"]
 advance_mode = 2
-advance_condition = &"idle"
 
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_cutrv"]
+states/character_chrouch_walk/node = SubResource("AnimationNodeAnimation_r471x")
+states/character_chrouch_walk/position = Vector2(705, 100)
 states/character_jump/node = SubResource("AnimationNodeAnimation_pheji")
-states/character_jump/position = Vector2(523, 29)
-states/idle/node = SubResource("AnimationNodeAnimation_onjm0")
-states/idle/position = Vector2(324, 100)
-states/walking_animation/node = SubResource("AnimationNodeAnimation_6uoma")
-states/walking_animation/position = Vector2(680, 113)
-transitions = ["walking_animation", "idle", SubResource("AnimationNodeStateMachineTransition_xvaux"), "idle", "walking_animation", SubResource("AnimationNodeStateMachineTransition_4kr3j"), "Start", "idle", SubResource("AnimationNodeStateMachineTransition_tt6k8"), "walking_animation", "character_jump", SubResource("AnimationNodeStateMachineTransition_v8kio"), "character_jump", "walking_animation", SubResource("AnimationNodeStateMachineTransition_n6kxn"), "idle", "character_jump", SubResource("AnimationNodeStateMachineTransition_t8c3c"), "character_jump", "idle", SubResource("AnimationNodeStateMachineTransition_b7pl5")]
+states/character_jump/position = Vector2(579, 29)
+states/character_walk/node = SubResource("AnimationNodeAnimation_elb5t")
+states/character_walk/position = Vector2(436, 100)
+states/idle/node = SubResource("AnimationNodeAnimation_2edwr")
+states/idle/position = Vector2(323, 166)
+transitions = ["Start", "character_walk", SubResource("AnimationNodeStateMachineTransition_4wpyf"), "character_walk", "character_jump", SubResource("AnimationNodeStateMachineTransition_uinnu"), "character_walk", "character_chrouch_walk", SubResource("AnimationNodeStateMachineTransition_1arer"), "idle", "character_walk", SubResource("AnimationNodeStateMachineTransition_47rst"), "Start", "idle", SubResource("AnimationNodeStateMachineTransition_nypx6"), "character_jump", "character_walk", SubResource("AnimationNodeStateMachineTransition_f3soc")]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dnuf5"]
 atlas = ExtResource("35_b5qay")
@@ -625,10 +625,7 @@ script = ExtResource("1_wowva")
 [node name="Player_sprite" type="Sprite2D" parent="."]
 visible = false
 texture_filter = 1
-position = Vector2(0, -15)
-texture = ExtResource("2_uk5f0")
-hframes = 6
-frame = 1
+texture = ExtResource("2_5ljuu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 texture_filter = 1
@@ -654,7 +651,8 @@ libraries = {
 tree_root = SubResource("AnimationNodeStateMachine_cutrv")
 anim_player = NodePath("../AnimationPlayer")
 advance_expression_base_node = NodePath("")
-parameters/conditions/idle = false
+active = true
+parameters/conditions/crouching = false
 parameters/conditions/jumping = false
 parameters/conditions/walking = false
 
@@ -663,4 +661,8 @@ position = Vector2(1, -15)
 sprite_frames = SubResource("SpriteFrames_o3qo5")
 animation = &"character_chrouch_walk"
 
+[node name="jump_timer" type="Timer" parent="."]
+wait_time = 0.5
+
 [connection signal="timeout" from="dash_timer" to="." method="_on_dash_timer_timeout"]
+[connection signal="timeout" from="jump_timer" to="." method="_on_jump_timer_timeout"]

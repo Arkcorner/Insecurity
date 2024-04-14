@@ -12,12 +12,13 @@ var Dash_count = 2
 #values for double jump
 const Jump_velocity = 165.0
 var Jump_count = 2
+var jumping = false
 var Can_jump = true
 # Set the Gravity
 var Gravity = 450
+var chrouching = false
 
-
-@onready var state_machine_tree = $StateMachineTree
+@onready var state_machine_tree = $AnimationTree
 # Wind
 @export var wind_light = false
 @export var wind_medium = false
@@ -37,6 +38,9 @@ func _physics_process(delta):
 	_wall_slide()
 	_wind()
 
+func _physics():
+	state_machine_tree.set("parameters/conditions/walking", (velocity.x != 0 ))
+	
 func _handle_climbing():
 	if Global.is_climbing == true:
 		Gravity = 0
@@ -72,16 +76,19 @@ func _handle_game_time():
 func _movement_handler():
 	#Handle crouch 
 	if Input.is_action_pressed("crouch"):
+		state_machine_tree.set("parameters/conditions/walking", false)
 		log( 1.5)
 		_scale.y = 0.5
 		set_scale(_scale)
 		Speed = 25
+		state_machine_tree.set("parameters/conditions/crouching", chrouching)
 		Can_jump = false
 	if Input.is_action_just_released("crouch"):
 		_scale.y = 1
 		set_scale(_scale)
 		Speed = 75
 		Can_jump = true
+		state_machine_tree.set("parameters/conditions/crouching", chrouching)
 	if Input.is_action_just_pressed("dash") and Can_dash:
 		Dashing = true
 		Dash_count = Dash_count -1 
@@ -95,15 +102,17 @@ func _movement_handler():
 	if Input.is_action_just_pressed("ui_accept") and Can_jump:
 		velocity.y = Jump_velocity * (-1)
 		Jump_count = Jump_count-1
+		jumping = true
 	var directiony = Input.get_axis("ui_up","ui_down")
 	var directionx = Input.get_axis("ui_left", "ui_right")
 	if Input.is_action_just_pressed("ui_left"):
 		$Player_sprite.set_flip_h(true)
-		
+		state_machine_tree.set("parameters/conditions/walking", (velocity.x != 0 ))
+		print("walking set to true")
 	if Input.is_action_just_pressed("ui_right"):
 		$Player_sprite.set_flip_h(false)
 	if directionx:
-		state_machine_tree.set("parameters/conditions/walking", true)
+		state_machine_tree.set("parameters/conditions/walking", (velocity.x != 0 ))
 		if Dashing:
 			velocity.x = directionx * Dash_speed
 			velocity.y = directiony * Dash_speed
@@ -114,8 +123,7 @@ func _movement_handler():
 		return
 
 #stop timer and set dashing to false
-func _on_dash_timer_timeout() -> void:
-	Dashing = false
+func _on_dash_timer_timeout() -> void: Dashing = false
 
 func _on_area_2d_body_entered(body):
 	pass # Replace with function body.
@@ -134,3 +142,6 @@ func _wind():
 		position.x -= .75
 	elif wind_strong == true:
 		position.x -= 1	
+
+
+func _on_jump_timer_timeout(): jumping = false

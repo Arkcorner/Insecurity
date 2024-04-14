@@ -1,6 +1,6 @@
 [gd_scene load_steps=43 format=3 uid="uid://4vn2ep6w7r5c"]
 
-[ext_resource type="PackedScene" uid="uid://bdqgumtunosqn" path="res://scenes/player.tscn" id="1_nn20y"]
+[ext_resource type="PackedScene" uid="uid://cdl4nyi5jadlm" path="res://scenes/player.tscn" id="1_nn20y"]
 [ext_resource type="Texture2D" uid="uid://bvt0yvg3kgbrq" path="res://assets/Art/Tiles/T_ice_background.png" id="2_e2chq"]
 [ext_resource type="Texture2D" uid="uid://cg1il88ftsniq" path="res://assets/Art/Tiles/T_ice.png" id="3_tlmid"]
 [ext_resource type="Texture2D" uid="uid://c42jyvjmec05u" path="res://assets/Art/Tiles/T_ground.png" id="4_5dbvp"]
@@ -1878,7 +1878,6 @@ color = Color(0.447059, 0.843137, 1, 0.705882)
 process_mode = 3
 stream = ExtResource("33_b7en6")
 volume_db = -15.045
-autoplay = true
 
 [editable path="Map/Wind"]
 [editable path="Map/Player/Transition_camera/Snow"]
