@@ -18,6 +18,10 @@ var Gravity = 450
 
 
 @onready var state_machine_tree = $StateMachineTree
+# Wind
+@export var wind_light = false
+@export var wind_medium = false
+@export var wind_strong = false
 
 #called for when the scene is instatiated be carefull it gets called every respawn
 func _ready():
@@ -31,6 +35,7 @@ func _physics_process(delta):
 	_handle_game_time()
 	move_and_slide()
 	_wall_slide()
+	_wind()
 
 func _handle_climbing():
 	if Global.is_climbing == true:
@@ -122,3 +127,10 @@ func _wall_slide():
 	else:
 		Gravity = 450
 
+func _wind():
+	if wind_light == true:
+		position.x -= .5
+	elif wind_medium == true:
+		position.x -= .75
+	elif wind_strong == true:
+		position.x -= 1	
