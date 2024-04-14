@@ -1,6 +1,6 @@
 [gd_scene load_steps=43 format=3 uid="uid://4vn2ep6w7r5c"]
 
-[ext_resource type="PackedScene" uid="uid://bkommoqyffoab" path="res://scenes/player.tscn" id="1_nn20y"]
+[ext_resource type="PackedScene" uid="uid://bdqgumtunosqn" path="res://scenes/player.tscn" id="1_nn20y"]
 [ext_resource type="Texture2D" uid="uid://bvt0yvg3kgbrq" path="res://assets/Art/Tiles/T_ice_background.png" id="2_e2chq"]
 [ext_resource type="Texture2D" uid="uid://cg1il88ftsniq" path="res://assets/Art/Tiles/T_ice.png" id="3_tlmid"]
 [ext_resource type="Texture2D" uid="uid://c42jyvjmec05u" path="res://assets/Art/Tiles/T_ground.png" id="4_5dbvp"]
@@ -1811,7 +1811,6 @@ position = Vector2(160, -86)
 
 [node name="Player" parent="Map" instance=ExtResource("1_nn20y")]
 top_level = true
-texture_filter = 1
 position = Vector2(-205, -77)
 
 [node name="Transition_camera" type="Camera2D" parent="Map/Player"]
