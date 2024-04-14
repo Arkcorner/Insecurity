@@ -1,4 +1,4 @@
-[gd_scene load_steps=81 format=3 uid="uid://cdl4nyi5jadlm"]
+[gd_scene load_steps=82 format=3 uid="uid://cdl4nyi5jadlm"]
 
 [ext_resource type="Script" path="res://scripts/Player.gd" id="1_wowva"]
 [ext_resource type="Texture2D" uid="uid://d3bqu7xkwdmmk" path="res://assets/Art/Characters/Dexter_player1.png" id="2_5ljuu"]
@@ -430,16 +430,20 @@ advance_mode = 2
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_f3soc"]
 advance_mode = 2
 
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_cq82g"]
+advance_mode = 2
+advance_condition = &"jumping"
+
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_cutrv"]
 states/character_chrouch_walk/node = SubResource("AnimationNodeAnimation_r471x")
-states/character_chrouch_walk/position = Vector2(705, 100)
+states/character_chrouch_walk/position = Vector2(640, 166)
 states/character_jump/node = SubResource("AnimationNodeAnimation_pheji")
 states/character_jump/position = Vector2(579, 29)
 states/character_walk/node = SubResource("AnimationNodeAnimation_elb5t")
 states/character_walk/position = Vector2(436, 100)
 states/idle/node = SubResource("AnimationNodeAnimation_2edwr")
 states/idle/position = Vector2(323, 166)
-transitions = ["Start", "character_walk", SubResource("AnimationNodeStateMachineTransition_4wpyf"), "character_walk", "character_jump", SubResource("AnimationNodeStateMachineTransition_uinnu"), "character_walk", "character_chrouch_walk", SubResource("AnimationNodeStateMachineTransition_1arer"), "idle", "character_walk", SubResource("AnimationNodeStateMachineTransition_47rst"), "Start", "idle", SubResource("AnimationNodeStateMachineTransition_nypx6"), "character_jump", "character_walk", SubResource("AnimationNodeStateMachineTransition_f3soc")]
+transitions = ["Start", "character_walk", SubResource("AnimationNodeStateMachineTransition_4wpyf"), "character_walk", "character_jump", SubResource("AnimationNodeStateMachineTransition_uinnu"), "character_walk", "character_chrouch_walk", SubResource("AnimationNodeStateMachineTransition_1arer"), "idle", "character_walk", SubResource("AnimationNodeStateMachineTransition_47rst"), "Start", "idle", SubResource("AnimationNodeStateMachineTransition_nypx6"), "character_jump", "character_walk", SubResource("AnimationNodeStateMachineTransition_f3soc"), "Start", "character_jump", SubResource("AnimationNodeStateMachineTransition_cq82g")]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dnuf5"]
 atlas = ExtResource("35_b5qay")

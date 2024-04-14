@@ -32,6 +32,9 @@ func _ready():
 
 #Main fucntion thats being called every frame pls make stuff outside of it and call that function from here if necessary
 func _physics_process(delta):
+	
+	state_machine_tree.set("parameters/conditions/walking", (velocity.x != 0 ))
+	state_machine_tree.set("parameters/conditions/jumping", (velocity.y > 0 ))
 	_movement_handler()
 	_handle_game_time()
 	move_and_slide()
@@ -40,7 +43,7 @@ func _physics_process(delta):
 
 func _physics():
 	state_machine_tree.set("parameters/conditions/walking", (velocity.x != 0 ))
-	
+	state_machine_tree.set("parameters/conditions/jumping", (velocity.y > 0 ))
 func _handle_climbing():
 	if Global.is_climbing == true:
 		Gravity = 0
@@ -103,14 +106,15 @@ func _movement_handler():
 		velocity.y = Jump_velocity * (-1)
 		Jump_count = Jump_count-1
 		jumping = true
+		
 	var directiony = Input.get_axis("ui_up","ui_down")
 	var directionx = Input.get_axis("ui_left", "ui_right")
 	if Input.is_action_just_pressed("ui_left"):
-		$Player_sprite.set_flip_h(true)
+		$AnimatedSprite2D.set_flip_h(true)
 		state_machine_tree.set("parameters/conditions/walking", (velocity.x != 0 ))
 		print("walking set to true")
 	if Input.is_action_just_pressed("ui_right"):
-		$Player_sprite.set_flip_h(false)
+		$AnimatedSprite2D.set_flip_h(false)
 	if directionx:
 		state_machine_tree.set("parameters/conditions/walking", (velocity.x != 0 ))
 		if Dashing:
