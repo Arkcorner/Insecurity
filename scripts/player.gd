@@ -2,13 +2,14 @@ extends CharacterBody2D
 
 var _scale = Vector2(1, 2)
 var Speed = 75
+var crouch = false
+var notCrouching = true
 
 # dash values
 const Dash_speed = 150
 var Dashing = false
 var Can_dash = true
 var Dash_count = 2
-
 #values for double jump
 const Jump_velocity = 165.0
 var Jump_count = 2
@@ -32,18 +33,17 @@ func _ready():
 
 #Main fucntion thats being called every frame pls make stuff outside of it and call that function from here if necessary
 func _physics_process(delta):
-	
-	state_machine_tree.set("parameters/conditions/walking", (velocity.x != 0 ))
-	state_machine_tree.set("parameters/conditions/jumping", (velocity.y > 0 ))
 	_movement_handler()
 	_handle_game_time()
 	move_and_slide()
 	_wall_slide()
 	_wind()
 
-func _physics():
-	state_machine_tree.set("parameters/conditions/walking", (velocity.x != 0 ))
-	state_machine_tree.set("parameters/conditions/jumping", (velocity.y > 0 ))
+func _process(delta):
+	state_machine_tree.set("parameters/conditions/jumping", _check_if_jumping())
+	state_machine_tree.set("parameters/conditions/crouching", _check_if_crouching())
+	state_machine_tree.set("parameters/conditions/notCrouching", notCrouching)
+	
 func _handle_climbing():
 	if Global.is_climbing == true:
 		Gravity = 0
@@ -56,7 +56,7 @@ func _handle_climbing():
 		if Input.is_action_just_released("ui_up"):
 			velocity.y = 0
 	if Global.is_climbing == false:
-		Gravity = 450	
+		Gravity = 450
 
 func _handle_game_time():
 	if Global.time_running :
@@ -79,19 +79,20 @@ func _handle_game_time():
 func _movement_handler():
 	#Handle crouch 
 	if Input.is_action_pressed("crouch"):
-		state_machine_tree.set("parameters/conditions/walking", false)
 		log( 1.5)
 		_scale.y = 0.5
-		set_scale(_scale)
+		$CollisionShape2D.set_scale(_scale)
 		Speed = 25
-		state_machine_tree.set("parameters/conditions/crouching", chrouching)
 		Can_jump = false
+		crouch = true
+		notCrouching = false
 	if Input.is_action_just_released("crouch"):
 		_scale.y = 1
-		set_scale(_scale)
+		$CollisionShape2D.set_scale(_scale)
 		Speed = 75
 		Can_jump = true
-		state_machine_tree.set("parameters/conditions/crouching", chrouching)
+		crouch = false
+		notCrouching = true
 	if Input.is_action_just_pressed("dash") and Can_dash:
 		Dashing = true
 		Dash_count = Dash_count -1 
@@ -111,12 +112,9 @@ func _movement_handler():
 	var directionx = Input.get_axis("ui_left", "ui_right")
 	if Input.is_action_just_pressed("ui_left"):
 		$AnimatedSprite2D.set_flip_h(true)
-		state_machine_tree.set("parameters/conditions/walking", (velocity.x != 0 ))
-		print("walking set to true")
 	if Input.is_action_just_pressed("ui_right"):
 		$AnimatedSprite2D.set_flip_h(false)
 	if directionx:
-		state_machine_tree.set("parameters/conditions/walking", (velocity.x != 0 ))
 		if Dashing:
 			velocity.x = directionx * Dash_speed
 			velocity.y = directiony * Dash_speed
@@ -147,5 +145,10 @@ func _wind():
 	elif wind_strong == true:
 		position.x -= 1	
 
+func _check_if_jumping():
+	return velocity.y < 0 
 
 func _on_jump_timer_timeout(): jumping = false
+
+func _check_if_crouching():
+	return crouch
