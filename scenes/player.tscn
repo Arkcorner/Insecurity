@@ -676,6 +676,7 @@ animations = [{
 [node name="Player" type="CharacterBody2D"]
 texture_filter = 1
 script = ExtResource("1_wowva")
+Jump_count_total = 3
 
 [node name="Player_sprite" type="Sprite2D" parent="."]
 visible = false
@@ -718,6 +719,7 @@ parameters/conditions/notCrouching = false
 position = Vector2(1, -1)
 sprite_frames = SubResource("SpriteFrames_o3qo5")
 animation = &"character_jump"
+frame = 10
 
 [node name="jump_timer" type="Timer" parent="."]
 wait_time = 0.5

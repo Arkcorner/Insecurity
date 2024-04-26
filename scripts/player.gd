@@ -1,22 +1,26 @@
 extends CharacterBody2D
 
 var _scale = Vector2(1, 2)
-var Speed = 75
+@export var Player_speed_total = 75
+var Player_speed = Player_speed_total
 var crouch = false
 var notCrouching = true
 
 # dash values
-const Dash_speed = 150
+@export var Dash_speed = 150
 var Dashing = false
 var Can_dash = true
-var Dash_count = 2
+@export var Dash_count_total = 2
+var Dash_count = Dash_count_total
 #values for double jump
-const Jump_velocity = 165.0
-var Jump_count = 2
+@export var Jump_velocity = 165.0
+@export var Jump_count_total = 2
+var Jump_count = Jump_count_total
 var jumping = false
 var Can_jump = true
 # Set the Gravity
 var Gravity = 450
+@export var Chrouch_speed_total = 25
 var chrouching = false
 
 @onready var state_machine_tree = $AnimationTree
@@ -61,14 +65,14 @@ func _handle_climbing():
 func _handle_game_time():
 	if Global.time_running :
 		if is_on_floor(): 
-			Dash_count = 2
-			Jump_count = 2
+			Dash_count = Dash_count_total
+			Jump_count = Jump_count_total
 		if Dash_count < 1:
 			Can_dash = false
 		else:
 			Can_dash = true
 		#monitor jump count and stop more jumps in air 
-		if Jump_count < 1:
+		if Jump_count <= 1:
 			Can_jump = false
 		else:
 			Can_jump = true	# Add the gravity.
@@ -82,14 +86,14 @@ func _movement_handler():
 		log( 1.5)
 		_scale.y = 0.5
 		$CollisionShape2D.set_scale(_scale)
-		Speed = 25
+		Player_speed = Chrouch_speed_total
 		Can_jump = false
 		crouch = true
 		notCrouching = false
 	if Input.is_action_just_released("crouch"):
 		_scale.y = 1
 		$CollisionShape2D.set_scale(_scale)
-		Speed = 75
+		Player_speed = Player_speed_total
 		Can_jump = true
 		crouch = false
 		notCrouching = true
@@ -98,9 +102,9 @@ func _movement_handler():
 		Dash_count = Dash_count -1 
 		$dash_timer.start()
 	if Input.is_action_pressed("sprint"):
-		Speed = 100
+		Player_speed = 100
 	if Input.is_action_just_released("sprint"):
-		Speed = 75
+		Player_speed = Player_speed_total
 		
 	# Handle Jump.
 	if Input.is_action_just_pressed("ui_accept") and Can_jump:
@@ -119,9 +123,9 @@ func _movement_handler():
 			velocity.x = directionx * Dash_speed
 			velocity.y = directiony * Dash_speed
 		else:
-			velocity.x = directionx * Speed
+			velocity.x = directionx * Player_speed
 	else:
-		velocity.x = move_toward(velocity.x, 0, Speed)
+		velocity.x = move_toward(velocity.x, 0, Player_speed)
 		return
 
 #stop timer and set dashing to false
